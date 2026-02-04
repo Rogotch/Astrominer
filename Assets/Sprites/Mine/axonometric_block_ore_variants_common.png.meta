@@ -1,0 +1,314 @@
+fileFormatVersion: 2
+guid: 5f8720f1984d29d47b2ecb8ca1acb519
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6096032470833942666
+    second: axonometric_block_ore_variants_common_0
+  - first:
+      213: 6675614451591615605
+    second: axonometric_block_ore_variants_common_1
+  - first:
+      213: -5914864257856954828
+    second: axonometric_block_ore_variants_common_2
+  - first:
+      213: 7466297726742171923
+    second: axonometric_block_ore_variants_common_3
+  - first:
+      213: 4267374510916449363
+    second: axonometric_block_ore_variants_common_4
+  - first:
+      213: -1818681540041780533
+    second: axonometric_block_ore_variants_common_5
+  - first:
+      213: 3446252173035375010
+    second: axonometric_block_ore_variants_common_6
+  - first:
+      213: 2653777203893259786
+    second: axonometric_block_ore_variants_common_7
+  - first:
+      213: 4147853829271356672
+    second: axonometric_block_ore_variants_common_8
+  - first:
+      213: 74500936323266242
+    second: axonometric_block_ore_variants_common_9
+  - first:
+      213: 8006183078386611478
+    second: axonometric_block_ore_variants_common_10
+  - first:
+      213: 5109160558044841390
+    second: axonometric_block_ore_variants_common_11
+  - first:
+      213: 4479497604639255105
+    second: axonometric_block_ore_variants_common_12
+  - first:
+      213: -495481745711752655
+    second: axonometric_block_ore_variants_common_13
+  - first:
+      213: -2711008352814523834
+    second: axonometric_block_ore_variants_common_14
+  - first:
+      213: 5859629657583781528
+    second: axonometric_block_ore_variants_common_15
+  - first:
+      213: 5764542315724383477
+    second: axonometric_block_ore_variants_common_16
+  - first:
+      213: -8827749808656597628
+    second: axonometric_block_ore_variants_common_17
+  - first:
+      213: 5319660143854047577
+    second: axonometric_block_ore_variants_common_18
+  - first:
+      213: 6792522018024061028
+    second: axonometric_block_ore_variants_common_19
+  - first:
+      213: -5225151083115677711
+    second: axonometric_block_ore_variants_common_20
+  - first:
+      213: -8304501652093066795
+    second: axonometric_block_ore_variants_common_21
+  - first:
+      213: -6758348154528417089
+    second: axonometric_block_ore_variants_common_22
+  - first:
+      213: -7781849121662540148
+    second: axonometric_block_ore_variants_common_23
+  - first:
+      213: 4708774302426920642
+    second: axonometric_block_ore_variants_common_24
+  - first:
+      213: 6890289580812072463
+    second: axonometric_block_ore_variants_common_25
+  - first:
+      213: 6776519526233245702
+    second: axonometric_block_ore_variants_common_26
+  - first:
+      213: 2653451391513572461
+    second: axonometric_block_ore_variants_common_27
+  - first:
+      213: 3892780438961277690
+    second: axonometric_block_ore_variants_common_28
+  - first:
+      213: -2033731066817162087
+    second: axonometric_block_ore_variants_common_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: axonometric_block_ore_variants_common_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80dd4beb35799450800000000000000
+      internalID: 6096032470833942666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_block_ore_variants_common_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574159c89fb84ac50800000000000000
+      internalID: 6675614451591615605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_block_ore_variants_common_2
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e18c7bb4e2aeda0800000000000000
+      internalID: -5914864257856954828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_block_ore_variants_common_3
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 0
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31116cd693e9d9760800000000000000
+      internalID: 7466297726742171923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 864e96c1481d672429141cfda5a7716c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":92.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":true,"isAlternate":false}'
+    nameFileIdTable:
+      axonometric_block_ore_variants_common_0: 6096032470833942666
+      axonometric_block_ore_variants_common_1: 6675614451591615605
+      axonometric_block_ore_variants_common_2: -5914864257856954828
+      axonometric_block_ore_variants_common_3: 7466297726742171923
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

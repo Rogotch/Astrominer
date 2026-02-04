@@ -1,0 +1,3792 @@
+fileFormatVersion: 2
+guid: c9a7beaa0d2e0d8469065bbac8844b79
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4963637753210773525
+    second: tilesheet_complete_2X_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: axonometric_blocks_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1ddc3d9ee5cad42bde1457049dc496
+      internalID: 1879222227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab220cffaaacc34d83af0a724daf936
+      internalID: 164741762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15e3352ba561e74d8a9e0bf231c1303
+      internalID: -1033103316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_3
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b266162a488114408004c1d99d99119
+      internalID: -1306765177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_4
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0bfa7301f26e34aaa6223e9dea2719
+      internalID: -1905168304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_5
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1efd34912af01418a83cd96a1369f5
+      internalID: 1382779283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_6
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca5d84eb68bfb44c86208cd4207d78f
+      internalID: -1212034357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_7
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53e435c189bbf9439b6740331430a9a
+      internalID: 686712967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_8
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e2e58490b9ebf4586c6927e1c79074
+      internalID: -1902480507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_9
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91821b111c93d67438565e59d1c9e973
+      internalID: -1740422186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_10
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30e1527c1ad6424ab03951b3829546b
+      internalID: -373710785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_11
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa85eddf953b52e468fc48d4572c1b5f
+      internalID: -1357465968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_12
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f46e4b599972c4c9a85a755869080e
+      internalID: -28305850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_13
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa210d69c9a23740b9a260e6e524e5f
+      internalID: -189612110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_14
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15e89a873d8b2a45a04195316ed8269
+      internalID: 1129917459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_15
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a27dd6e590bfab4fb0202cc97bd7c61
+      internalID: -691985101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_16
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187ba95b955afe9428c8a5386de1de2b
+      internalID: -959344168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_17
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b886fa7344b8b4a85b9e9d55aea803
+      internalID: -1636974174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_18
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bfdd4d31f738a4cbe11bfded50959a
+      internalID: -538439889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_19
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b376611135e2b1d428b15b4927d70f92
+      internalID: 1229290708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_20
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1120
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe95248647200e441953de1fc21d37fd
+      internalID: 299418526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d1375606122f248b8ab80d0c08bde5
+      internalID: -1550868496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_22
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a335332e61229408dd9d688869b9af
+      internalID: 152368586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_23
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c268720debc7a57448b60b8b106fcf3c
+      internalID: 1028924551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_24
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe59f3def212b84481a50939dd138dd
+      internalID: 115569455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_25
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e332eaca7eb78f459bb1a6a9db35583
+      internalID: 577463557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_26
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d9a815beb34534db61740eadcb7f34
+      internalID: 1023366141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_27
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c96c26e7127c0248ba44124a2aefc65
+      internalID: -644339273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_28
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8a570f11a6c3843b35df5512567360
+      internalID: -83683586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_29
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bf043ba826b6b4ba7e591ac5d86dcb
+      internalID: 100519653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_30
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02af1f6cd34c17b4397185fca4401de7
+      internalID: -1083831384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_31
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bc187f43d110049bcd9658a280e368
+      internalID: -1135281451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_32
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c0a703957c57c4393900ca8d6081c8
+      internalID: 1326073984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_33
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c9a3e45f175a54b9179729c950d869
+      internalID: 652424156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_34
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9439690440476c45820e32e3438b689
+      internalID: -813946539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_35
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e3b58858f07fd4aabd7b4460d34143
+      internalID: -1256845281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_36
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1b7cc0125cc8e4c9858091a372516f
+      internalID: 1642085884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_37
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cfd474d07053e478d029b1c90327ce
+      internalID: -490016896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_38
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981830c7d8d52fc4bafe3196de81644e
+      internalID: 1951354618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_39
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30a7b7305f1d474097bd48155409aa9
+      internalID: 1159730265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_40
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb7aec85d05177469dfe58dda7be09b
+      internalID: 1651756207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_41
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 960
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a693b0b107cb0c24c9da0b0148bd7671
+      internalID: 989919354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7adf4bd34a38729489e356b91d708ea2
+      internalID: -1621758946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_43
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c270f2a15c97fd46ae114507245b47b
+      internalID: 31413718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_44
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47936b411625c5468a817f687d0401f
+      internalID: -1561951106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_45
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a45a50fc8b5f14f8cc466f8c0b1704
+      internalID: 731586042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_46
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9c5efcbbecdb948909c23e3c2256ce
+      internalID: 571908859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_47
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e207273fd7edfe745a56021eb0dd5a44
+      internalID: -707083127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_48
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d7e564629e855468953c1534b899ca
+      internalID: -1312542971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_49
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af769fa26a514840b6067e942b74b8f
+      internalID: -212877127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_50
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76f917ee9f63eb4d965a996906356d2
+      internalID: 1618325960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_51
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b8b538d6eb8ad40b8b818f95dcd2ba
+      internalID: -1913382322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_52
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50e44a4655eeb64fabb4c7b44d0eecf
+      internalID: -1498673609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_53
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c6c24bd36bc674c908865d397ea0be
+      internalID: -1001465025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_54
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c2c22cc400748428078cafd88ac057
+      internalID: 1214449077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_55
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94ca4448886ed0469798c6a57bfedf8
+      internalID: -2033845265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_56
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff71a6a518e6c0948b4f790c5d38f8cd
+      internalID: 811718047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_57
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c0921ac7000e24f86e51ac1aeab141
+      internalID: -200615812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_58
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0be0960ccb2964f8792d842a8eb199
+      internalID: -1415077977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_59
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a87986b32236d43b2ffca51ef0a650
+      internalID: -1720720420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_60
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c356bfc62cf36e149a3b9f4af3ba86f6
+      internalID: -1291343892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_61
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3a7a0b4b0ed8e4299342eb8b01cddc
+      internalID: -637552521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_62
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 800
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16995bfb457366047b92954a5117d069
+      internalID: -1877250113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585e6c16290bcc1499e8e3aa277b16ca
+      internalID: 1802938020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_64
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807185b4bfa52d64dbac2a5831fe13fa
+      internalID: -487780399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_65
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c3ed656ebc80d4facaecb2daca54f7
+      internalID: -1135728918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_66
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95d2129658bd4c4db993b73194e41c6
+      internalID: 898267705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_67
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e568ae1d34a6c4488f4798b25987b6f
+      internalID: 1106967339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_68
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4de5cd03a5a00b41990648957017787
+      internalID: -2125576263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_69
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1776dfc1c0ea91d4ca12159ef3ada96f
+      internalID: 1172756898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_70
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc7be0409bbad44faa2229f8e3dc97d
+      internalID: 1101576648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_71
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee238bdcfc168e43a0cd73afe544b42
+      internalID: -1910281876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_72
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1294bc01b2fd64cb9b6b66d95277a5
+      internalID: 1093020309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_73
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cc8ec445879bc418236c664aded960
+      internalID: -1212988992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_74
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5bb29a823705046ad92f0cc650421d
+      internalID: -1102986615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_75
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40401e7da6fb5ad4cb2c5547d2df6663
+      internalID: -1311215585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_76
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6ff19687645a84a896c862e29b3e24
+      internalID: -630262389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_77
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064885d091fc12646a7fd4eb98e62c4c
+      internalID: 313689006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_78
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8583fc10bdef364ba23fd4d402c2be8
+      internalID: -2099361883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_79
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da60193b7d6e75498a1e8da7391cc68
+      internalID: -1596634318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_80
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b527a3c25ffeb4d8d4a39c80cad8d2
+      internalID: 1374963669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_81
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad909d1a958c19d49961c712138a060e
+      internalID: 89903343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_82
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91541bfab8be6d7479f1f094c8498fef
+      internalID: 448590305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_83
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 640
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c704d0a038d01409ebd5cc6c566225
+      internalID: -1753847863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7730c1ce2b5fd4495fa63fcdc1f7ef
+      internalID: -955954633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_85
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df7c931b8ab700448886f97d0434791
+      internalID: 1019712786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_86
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd6df19b3ed3bb43b0365179afe8909
+      internalID: -427408086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_87
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf032eb9fe03c7a439495a87d2b35b7c
+      internalID: 203805834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_88
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999df838d5daaa44daa690cbb4bf5000
+      internalID: 392473178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_89
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba027ab9d35454459c15c29436bf9cb
+      internalID: -301135602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_90
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b827bf5bb1bc024a86231b427357775
+      internalID: -1166998144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_91
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f6c288632361e4486700f253158209
+      internalID: 1227903096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_92
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78aab4d5cb1fb54885bbdfe74e7d63e
+      internalID: 1170587603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_93
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd6fc438b6a00546864a5b0a91b080d
+      internalID: 224422674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_94
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f32369a643af904c982f8897d1b9887
+      internalID: 521074391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_95
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5fec6baa26c164b8fce1735721db58
+      internalID: -2045285366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_96
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad480c8409c3e14b8d8cd5ff7c516b8
+      internalID: -2137518498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_97
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cce8f23ac4bf1d469ebfc7ca1c3de55
+      internalID: 1526929311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_98
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b943b30e367ebd34c8ff66a5dc41cb7f
+      internalID: 768344397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_99
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4f6aad087f7284d9680fff13ee8e97
+      internalID: 2219746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_100
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34937baec58e294eaa51d991c33c918
+      internalID: 952616010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_101
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91f7a14044148048b7aabb19499b28a
+      internalID: 1976106224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_102
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0da6bbba8d04747925ec86dce2151f
+      internalID: -770469781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_103
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ee906c9f24ffd42bfa923761e53136
+      internalID: -1838594886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_104
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 480
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b758c940eb3e045b89041a91a07ce3
+      internalID: 915869095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205e0a7381bff1e45a0af10bf850b4eb
+      internalID: -1291770948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_106
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db07bfd9ce93e742bc567bac3652289
+      internalID: 1283485431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_107
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17848b3dbf7fec498bf82eab55e3cc6
+      internalID: -494743003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_108
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9295d7d5812b8d4994058643358634c
+      internalID: 539618748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_109
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224737313460e024f8a2856a6bf0bd0a
+      internalID: -74330604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_110
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4732b2169871740879b98bdae2c2ae
+      internalID: 1018564795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_111
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bffc09564f9984188aba7cb741d432
+      internalID: -824734406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_112
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d33ef598d26de48bd6b7c1c5d0cf8c
+      internalID: -1648358993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_113
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53728f7081f0e364c9601c003f0dcd9a
+      internalID: 1232793606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_114
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5350f3d5a853643827cd5bb24f685b
+      internalID: 646823110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_115
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea201ad9d7786e489fc5805c758c187
+      internalID: -659706936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_116
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d82ba78482a4324694122a595628b66
+      internalID: -436862330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_117
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3733d23106f7c8f4db1ca4cf569985c9
+      internalID: 958152219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_118
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc7c16789eb85e4283460fbe3765af3
+      internalID: 785112275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_119
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb773306ceb9c347bb412d1421601c8
+      internalID: -23641269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_120
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb65f111dfbe8e4aa183854d72eb1aa
+      internalID: -894790927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_121
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a55aad73205bc4ebdb5b8dd2c24bcf
+      internalID: -38750160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_122
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d58efc00a46234a93f44aedfe76151
+      internalID: -1407747741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_123
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd1dc72ac08d9443b6144d1dab54b47
+      internalID: 1044300647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_124
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41777987387a89a4484cb011f616ea85
+      internalID: -2097733956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_125
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 320
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59dbc8accb307db479d8654504537e2c
+      internalID: -213497082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607d0687b8b15154da43b39aaa2843fa
+      internalID: -451959146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_127
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72ac002eeb41c34abd77d74bf4466c2
+      internalID: -417739567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_128
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db594b0d2a61264abc962b0ec27cc49
+      internalID: 1466693129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_129
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8799e414e5c5d75488070b9e74ccbaf3
+      internalID: -967492599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_130
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e7c2843188d0748a6ae83ab8695466
+      internalID: -498381214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_131
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bd26d90c54d734bacec7aa65bb0ff7
+      internalID: -1784147772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_132
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b0581ace27aaf4cb6ac2d931953166
+      internalID: 368072669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_133
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67294fa1956aa724e8e0dddc67ae42bd
+      internalID: 1616384263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_134
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf126cfe67f4c6d4491138003c9e212c
+      internalID: 1281184877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_135
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b38e03acd862914295a809983dfda8b
+      internalID: -1458358032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_136
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6759daf11ccc74ea2d8704b5ffadc8
+      internalID: -387774661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_137
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 160
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed866e718a15f94a85882d0678c7cb7
+      internalID: -31855378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_138
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e5bb8110ae0cf44ac55a53d5046001
+      internalID: 563599617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_139
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02a8ecbea6420041b81e330f0018e84
+      internalID: 1067485165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_140
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9264d58651a27747bcd655780808a13
+      internalID: -1038422446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_141
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bbdb5d42f41354daad9e0eb179dd9b
+      internalID: -2014799341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_142
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a62ec75efe11b64a87008287ebf6261
+      internalID: -486336862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_143
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e501da09bcd2ae46b1f0b292e98277a
+      internalID: 1820383341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_144
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedd622dcb15daf49bec121eb888a3e6
+      internalID: -21255506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_145
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906eaecc6ed21fe499cb52cb7943fe66
+      internalID: 541423745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_146
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906ade32229e0ff4d9aff943697543d5
+      internalID: -1924222488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_147
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9673e46951aa030459355cb88b6a721d
+      internalID: 1219790953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_148
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610443d2464d2ec4fb7f6f6ae5e557c8
+      internalID: -578213641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_149
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d58e0080b89ddb4685ff01dab7172d2
+      internalID: 145568369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_150
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c9174e9878f594786e154396cc3af0
+      internalID: 1060769154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_151
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19383937270444f46811e7a73ff020ad
+      internalID: -1065161262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_152
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f2672cda5748b45b6c33f7dfc35cfa
+      internalID: 1634730968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_153
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afd80f4699357f4a907132abb9f3106
+      internalID: 1307897595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_154
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68dd4fe1305868749982a83a0e7532b6
+      internalID: -798034864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_155
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5282f80295b204c89ea3b2d62cc7aa
+      internalID: -920071433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_156
+      rect:
+        serializedVersion: 2
+        x: 3312
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467380b9b7bb2f543a9c6257683a4113
+      internalID: -1755143930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_157
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d8f51527c41b44f8d236fb101bbf2a
+      internalID: 730107131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: axonometric_blocks_158
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 0
+        width: 184
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d884249c303654f46ab403c062ce612b
+      internalID: 1324274962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 68d8ca7b9c20c1646ae987f007d68be5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":21.0,"y":8.0},"gridSpriteSize":{"x":184.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      axonometric_blocks_0: 1879222227
+      axonometric_blocks_1: 164741762
+      axonometric_blocks_10: -373710785
+      axonometric_blocks_100: 952616010
+      axonometric_blocks_101: 1976106224
+      axonometric_blocks_102: -770469781
+      axonometric_blocks_103: -1838594886
+      axonometric_blocks_104: 915869095
+      axonometric_blocks_105: -1291770948
+      axonometric_blocks_106: 1283485431
+      axonometric_blocks_107: -494743003
+      axonometric_blocks_108: 539618748
+      axonometric_blocks_109: -74330604
+      axonometric_blocks_11: -1357465968
+      axonometric_blocks_110: 1018564795
+      axonometric_blocks_111: -824734406
+      axonometric_blocks_112: -1648358993
+      axonometric_blocks_113: 1232793606
+      axonometric_blocks_114: 646823110
+      axonometric_blocks_115: -659706936
+      axonometric_blocks_116: -436862330
+      axonometric_blocks_117: 958152219
+      axonometric_blocks_118: 785112275
+      axonometric_blocks_119: -23641269
+      axonometric_blocks_12: -28305850
+      axonometric_blocks_120: -894790927
+      axonometric_blocks_121: -38750160
+      axonometric_blocks_122: -1407747741
+      axonometric_blocks_123: 1044300647
+      axonometric_blocks_124: -2097733956
+      axonometric_blocks_125: -213497082
+      axonometric_blocks_126: -451959146
+      axonometric_blocks_127: -417739567
+      axonometric_blocks_128: 1466693129
+      axonometric_blocks_129: -967492599
+      axonometric_blocks_13: -189612110
+      axonometric_blocks_130: -498381214
+      axonometric_blocks_131: -1784147772
+      axonometric_blocks_132: 368072669
+      axonometric_blocks_133: 1616384263
+      axonometric_blocks_134: 1281184877
+      axonometric_blocks_135: -1458358032
+      axonometric_blocks_136: -387774661
+      axonometric_blocks_137: -31855378
+      axonometric_blocks_138: 563599617
+      axonometric_blocks_139: 1067485165
+      axonometric_blocks_14: 1129917459
+      axonometric_blocks_140: -1038422446
+      axonometric_blocks_141: -2014799341
+      axonometric_blocks_142: -486336862
+      axonometric_blocks_143: 1820383341
+      axonometric_blocks_144: -21255506
+      axonometric_blocks_145: 541423745
+      axonometric_blocks_146: -1924222488
+      axonometric_blocks_147: 1219790953
+      axonometric_blocks_148: -578213641
+      axonometric_blocks_149: 145568369
+      axonometric_blocks_15: -691985101
+      axonometric_blocks_150: 1060769154
+      axonometric_blocks_151: -1065161262
+      axonometric_blocks_152: 1634730968
+      axonometric_blocks_153: 1307897595
+      axonometric_blocks_154: -798034864
+      axonometric_blocks_155: -920071433
+      axonometric_blocks_156: -1755143930
+      axonometric_blocks_157: 730107131
+      axonometric_blocks_158: 1324274962
+      axonometric_blocks_16: -959344168
+      axonometric_blocks_17: -1636974174
+      axonometric_blocks_18: -538439889
+      axonometric_blocks_19: 1229290708
+      axonometric_blocks_2: -1033103316
+      axonometric_blocks_20: 299418526
+      axonometric_blocks_21: -1550868496
+      axonometric_blocks_22: 152368586
+      axonometric_blocks_23: 1028924551
+      axonometric_blocks_24: 115569455
+      axonometric_blocks_25: 577463557
+      axonometric_blocks_26: 1023366141
+      axonometric_blocks_27: -644339273
+      axonometric_blocks_28: -83683586
+      axonometric_blocks_29: 100519653
+      axonometric_blocks_3: -1306765177
+      axonometric_blocks_30: -1083831384
+      axonometric_blocks_31: -1135281451
+      axonometric_blocks_32: 1326073984
+      axonometric_blocks_33: 652424156
+      axonometric_blocks_34: -813946539
+      axonometric_blocks_35: -1256845281
+      axonometric_blocks_36: 1642085884
+      axonometric_blocks_37: -490016896
+      axonometric_blocks_38: 1951354618
+      axonometric_blocks_39: 1159730265
+      axonometric_blocks_4: -1905168304
+      axonometric_blocks_40: 1651756207
+      axonometric_blocks_41: 989919354
+      axonometric_blocks_42: -1621758946
+      axonometric_blocks_43: 31413718
+      axonometric_blocks_44: -1561951106
+      axonometric_blocks_45: 731586042
+      axonometric_blocks_46: 571908859
+      axonometric_blocks_47: -707083127
+      axonometric_blocks_48: -1312542971
+      axonometric_blocks_49: -212877127
+      axonometric_blocks_5: 1382779283
+      axonometric_blocks_50: 1618325960
+      axonometric_blocks_51: -1913382322
+      axonometric_blocks_52: -1498673609
+      axonometric_blocks_53: -1001465025
+      axonometric_blocks_54: 1214449077
+      axonometric_blocks_55: -2033845265
+      axonometric_blocks_56: 811718047
+      axonometric_blocks_57: -200615812
+      axonometric_blocks_58: -1415077977
+      axonometric_blocks_59: -1720720420
+      axonometric_blocks_6: -1212034357
+      axonometric_blocks_60: -1291343892
+      axonometric_blocks_61: -637552521
+      axonometric_blocks_62: -1877250113
+      axonometric_blocks_63: 1802938020
+      axonometric_blocks_64: -487780399
+      axonometric_blocks_65: -1135728918
+      axonometric_blocks_66: 898267705
+      axonometric_blocks_67: 1106967339
+      axonometric_blocks_68: -2125576263
+      axonometric_blocks_69: 1172756898
+      axonometric_blocks_7: 686712967
+      axonometric_blocks_70: 1101576648
+      axonometric_blocks_71: -1910281876
+      axonometric_blocks_72: 1093020309
+      axonometric_blocks_73: -1212988992
+      axonometric_blocks_74: -1102986615
+      axonometric_blocks_75: -1311215585
+      axonometric_blocks_76: -630262389
+      axonometric_blocks_77: 313689006
+      axonometric_blocks_78: -2099361883
+      axonometric_blocks_79: -1596634318
+      axonometric_blocks_8: -1902480507
+      axonometric_blocks_80: 1374963669
+      axonometric_blocks_81: 89903343
+      axonometric_blocks_82: 448590305
+      axonometric_blocks_83: -1753847863
+      axonometric_blocks_84: -955954633
+      axonometric_blocks_85: 1019712786
+      axonometric_blocks_86: -427408086
+      axonometric_blocks_87: 203805834
+      axonometric_blocks_88: 392473178
+      axonometric_blocks_89: -301135602
+      axonometric_blocks_9: -1740422186
+      axonometric_blocks_90: -1166998144
+      axonometric_blocks_91: 1227903096
+      axonometric_blocks_92: 1170587603
+      axonometric_blocks_93: 224422674
+      axonometric_blocks_94: 521074391
+      axonometric_blocks_95: -2045285366
+      axonometric_blocks_96: -2137518498
+      axonometric_blocks_97: 1526929311
+      axonometric_blocks_98: 768344397
+      axonometric_blocks_99: 2219746
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
