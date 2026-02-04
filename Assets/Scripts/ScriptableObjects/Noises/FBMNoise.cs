@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Game/Noise Data Layer")]
+[CreateAssetMenu(menuName = "Game/FBM Noise Data Layer")]
 public class FBMNoise : SimpleNoise
 { 
     [Range(1, 5)]

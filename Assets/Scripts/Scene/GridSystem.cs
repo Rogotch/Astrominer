@@ -77,22 +77,6 @@ public class GridSystem : MonoBehaviour
         if (tilemap_top    != null) tilemap_top.ClearAllTiles();
     }
 
-    public void GenerateAsteroid()
-    {
-        Dictionary<Vector2Int, Cell> cells = new Dictionary<Vector2Int, Cell>();
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                Vector2Int position = new Vector2Int(x, y);
-                if (IsInsideAsteroid(position))
-                {
-                    cells[position] = null;
-                }
-            }
-        }
-    }
-
     private bool IsInsideAsteroid(Vector2Int position)
     {
         float dist_to_center = Vector2Int.Distance(position, center);
@@ -128,6 +112,9 @@ public class GridSystem : MonoBehaviour
         {
             for (int y = 0; y < height; y++)
             {
+                Vector2Int position = new Vector2Int(x, y);
+                if (!(IsInsideAsteroid(position) || layer.additional))
+                    continue;
                 //Внутри цикла проверяется, принимать ли значение шума за наличие клетки
                 if (!layer.noise.NoiseCellCheck(x, y)) continue;
                 Cell cell = new Cell(layer.cell_data);

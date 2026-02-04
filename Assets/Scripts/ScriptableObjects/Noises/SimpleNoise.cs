@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Game/Simple Noise Data Layer")]
 public class SimpleNoise : BaseNoise
 {
 
