@@ -12,7 +12,7 @@ public class FBMNoise : SimpleNoise
     [Range(1f, 4f)]
     public float lacunarity = 2f;
 
-    public override float GenerateNoise(int x, int y)
+    public override float GenerateNoise(float x, float y)
     {
         float total = 0f;
         float frequency = noise_scale;

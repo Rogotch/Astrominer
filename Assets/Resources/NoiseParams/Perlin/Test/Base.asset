@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6190b9db11b4b924ea03fe3ce2fc068d, type: 3}
   m_Name: Base
   m_EditorClassIdentifier: Assembly-CSharp::NoiseDataLayer
-  noise_scale: 0.2
+  noise_scale: 0.1012
+  treshold: 0.242
+  inversed_check: 0
   octaves: 3
   persistence: 0.3
   lacunarity: 1.5
-  treshold: 0.2
-  inversed_check: 0

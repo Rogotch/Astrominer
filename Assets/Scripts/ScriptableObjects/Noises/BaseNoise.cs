@@ -9,7 +9,12 @@ public abstract class BaseNoise : ScriptableObject
 
     public bool inversed_check;
 
-    public abstract float GenerateNoise(int x, int y);
-
-    public abstract bool NoiseCellCheck(int x, int y);
+    public abstract float GenerateNoise(float x, float y);
+    public virtual  float GenerateNoise(int x, int y)            {return GenerateNoise((float)x, (float)y);}
+    public virtual  float GenerateNoise(Vector2Int position)     {return GenerateNoise(position.x, position.y);}
+    public virtual  float GenerateNoise(Vector2    position)     {return GenerateNoise(position.x, position.y);}
+    public abstract bool  NoiseCellCheck(float x, float y);
+    public virtual  bool  NoiseCellCheck(int   x, int   y)       {return NoiseCellCheck((float)x, (float)y);}
+    public virtual  bool  NoiseCellCheck(Vector2Int position)    {return NoiseCellCheck(position.x, position.y);}
+    public virtual  bool  NoiseCellCheck(Vector2    position)    {return NoiseCellCheck(position.x, position.y);}
 }

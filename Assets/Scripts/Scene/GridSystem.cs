@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GridSystem : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GridSystem : MonoBehaviour
     [Header("ѕараметры астероида")]
     [SerializeField] private Vector2Int        center                = new Vector2Int(100, 100);
     [SerializeField] private int               radius                = 60;
-    [SerializeField] private SimpleNoise       asteroid_noise;
+    [SerializeField] private CellsDataLayer    asteroid_layer;
     [SerializeField] private CellsDataLayer[]  layers;
     [Range(0f, 1f), SerializeField]
                      private float             surfaceNoiseStrength  = 0.3f;
@@ -80,7 +81,7 @@ public class GridSystem : MonoBehaviour
     private bool IsInsideAsteroid(Vector2Int position)
     {
         float dist_to_center = Vector2Int.Distance(position, center);
-        float noise_value    = asteroid_noise.GenerateNoise(position);
+        float noise_value    = asteroid_layer.noise.GenerateNoise(position);
         float final_radius   = radius + noise_value * surfaceNoiseStrength;
 
         return dist_to_center <= final_radius;
@@ -91,30 +92,38 @@ public class GridSystem : MonoBehaviour
     {
         Game.CellsMap.Clear();
         ClearTiles();
+
+        Dictionary<Vector2Int, Cell> asteroid_cells = new Dictionary<Vector2Int, Cell>();
+
+        if (!asteroid_layer.additional)
+             asteroid_layer.additional = true;
+
+        GenerateLayer(asteroid_layer, ref asteroid_cells);
+
         //÷икл перебирает все слои и записывает один поверх другого
         foreach (CellsDataLayer layer in layers)
-        {
-            Dictionary<Vector2Int, Cell> cells = GenerateLayer(layer);
-            foreach (Vector2Int position in cells.Keys)
-            {
-                Game.CellsMap[position] = cells[position];
-            }
-        }
+            GenerateLayer(layer, ref asteroid_cells);
+
+        foreach (Vector2Int position in asteroid_cells.Keys)
+            Game.CellsMap[position] = asteroid_cells[position];
+
         DrawMap();
     }
 
     //NoiseDataLayer (и его наследники CellsDataLayer и OresDataLayer) - представл€ет из себ€ набор параметров дл€ генерации шума PerlinNoise
     //GenerateLayer генерирует словарь <Vector2Int, Cell> клеток согласно настройкам шума и сразу же заполн€ет его возможными ресурсами
-    private Dictionary<Vector2Int, Cell> GenerateLayer(CellsDataLayer layer)
+    private void GenerateLayer(CellsDataLayer layer, ref Dictionary<Vector2Int, Cell> asteroid_cells)
     {
-        Dictionary<Vector2Int, Cell> cells = new Dictionary<Vector2Int, Cell>();
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
                 Vector2Int position = new Vector2Int(x, y);
-                if (!(IsInsideAsteroid(position) || layer.additional))
-                    continue;
+
+                if (!IsInsideAsteroid(position) ||                                // ≈сли клетка вне радиуса астероида
+                    !(asteroid_cells.ContainsKey(position) || layer.additional))  // »ли если нет провер€емой позиции, а сам слой не добавочный
+                    continue;                                                     // “о переходим к следуюшей позиции
+
                 //¬нутри цикла провер€етс€, принимать ли значение шума за наличие клетки
                 if (!layer.noise.NoiseCellCheck(x, y)) continue;
                 Cell cell = new Cell(layer.cell_data);
@@ -132,10 +141,9 @@ public class GridSystem : MonoBehaviour
                     cell.cell_resource = final_resource;
                 }
 
-                cells[new Vector2Int(x, y)] = cell;
+                asteroid_cells[new Vector2Int(x, y)] = cell;
             }
         }
-        return cells;
     }
 
     private void DrawMap()
