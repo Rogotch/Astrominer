@@ -4,12 +4,19 @@ using UnityEngine.Tilemaps;
 
 public class TilemapLayers : MonoBehaviour
 {
+    #region
+    [SerializeField] private Color modulation = Color.white;
+    #endregion
+
     #region Tilemaps
     [SerializeField] private Tilemap tilemap_blocks;
     [SerializeField] private Tilemap tilemap_resources;
     [SerializeField] private Tilemap break_cells;
     #endregion
-
+    public void OnValidate()
+    {
+        SetModulation(modulation);
+    }
     public void ClearAllTiles()
     {
         tilemap_blocks.ClearAllTiles();
@@ -36,8 +43,7 @@ public class TilemapLayers : MonoBehaviour
 
         if (cell.cell_resource != null)
         {
-            Debug.Log("place resource");
-            TileBase resource_tile = cell.cell_resource.tile_variants.Dictionary[Game.GetCellNeighboursVector(position)];
+            TileBase resource_tile = cell.cell_resource.tile_variants.Dictionary[CellsSystem.GetCellNeighboursVector(position)];
             tilemap_resources.SetTile(new Vector3Int(position.x, position.y, 0), resource_tile);
 
         }
@@ -67,4 +73,13 @@ public class TilemapLayers : MonoBehaviour
     {
         if (cell == null) return;
     }
+
+    private void SetModulation(Color color)
+    {
+        tilemap_blocks.color = color;
+        tilemap_resources.color = color;
+        break_cells.color = color;
+    }
+
+
 }

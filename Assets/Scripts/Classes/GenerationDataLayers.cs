@@ -3,8 +3,8 @@ using UnityEngine;
 [System.Serializable]
 public class CellsDataLayer : GenerationDataLayer
 {
-    public Cell cell_data;
-    public OresDataLayer[] ores_data;
+    public CellData cell_data;
+    public BlocksResource resource_params;
     public bool additional = false;
 }
 [System.Serializable]

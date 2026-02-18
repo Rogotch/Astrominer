@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DomainWarpedAsteroid : CircleAsteroid
+[CreateAssetMenu(menuName = "Game/Asteroid Parameters/Domain Warped")]
+public class DomainWarpedAsteroid : CircleAsteroid, INoiseGenerator
 {
     #region Переменные инспектора
     [Header("Domain Warping")]
@@ -13,24 +14,32 @@ public class DomainWarpedAsteroid : CircleAsteroid
 
     public override bool IsInsideAsteroid(Vector2Int position)
     {
-        Vector2 warped = GetWarpedValue(position);
+        Vector2 warped         = GetWarpedValue(position);
 
-        float dist_to_center = Vector2.Distance(warped, center);
+        float dist_to_center   = Vector2.Distance(warped, center);
 
-        float noise_value = layerData.noise.GenerateNoise((warped - center));
+        float noise_value      = GenerateNoise(warped.x - center.x, warped.y - center.y);
 
-        float final_radius = radius + noise_value;
+        float final_radius     = radius + noise_value;
         return dist_to_center <= final_radius;
     }
-    public override float GetNoiseValue(Vector2Int position)
+    public override float GenerateNoise(Vector2Int position)
     {
         Vector2 new_coord = GetWarpedValue(position) - center;
         return layerData.noise.GenerateNoise(new_coord);
+    }
+    public override float GenerateNoise(float x, float y)
+    {
+        return GenerateNoise(new Vector2Int((int)x, (int)y));
     }
     public override bool NoiseCellCheck(Vector2Int position)
     {
         Vector2 new_coord = GetWarpedValue(position) - center;
         return layerData.noise.NoiseCellCheck(new_coord);
+    }
+    public override bool NoiseCellCheck(float x, float y)
+    {
+        return NoiseCellCheck(new Vector2Int((int)x, (int)y));
     }
     private Vector2 GetWarpedValue(Vector2Int position)
     {

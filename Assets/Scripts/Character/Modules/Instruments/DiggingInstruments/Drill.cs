@@ -65,13 +65,13 @@ public class Drill : DiggingInstrument
 
     public override void DigCell(Vector2Int from, Vector2Int cell)
     {
-        Game.DamageCell(cell, drillDamage);
+        CellsSystem.DamageCell(cell, drillDamage);
         CellDigged?.Invoke(cell);
     }
 
     public override bool IsCanDig(Vector2Int target)
     {
-        return !Game.IsCellEmpty(target);
+        return !CellsSystem.IsCellEmpty(target);
     }
 
     public override bool IsCanDigFrom(Vector2Int from, Vector2Int to)

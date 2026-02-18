@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937ca962951b916469a824638626164c, type: 3}
+  m_Name: CellWithOre
+  m_EditorClassIdentifier: Assembly-CSharp::CellData
+  max_health: 5
+  tile: {fileID: 11400000, guid: d54bbd9f6b375e448803bb17aac0e201, type: 2}
+  cell_resource: {fileID: 11400000, guid: 73fb76bb4ea1daf4fba8adc20a0bda3f, type: 2}

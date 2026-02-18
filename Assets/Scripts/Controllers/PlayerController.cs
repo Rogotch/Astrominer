@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,20 +11,22 @@ public class PlayerController : BaseCharacterController
     #region Private variables
     private PlayerInput player_input;
     private Vector2Int delayed_command;
+    private Dictionary<string, Item> picked_resources = new Dictionary<string, Item>();
+
     #endregion
 
     protected override void Awake()
     {
         base.Awake();
         ConnectInput(GetComponent<PlayerInput>());
-        Game.Player = this;
+        CellsSystem.Player = this;
         ChangeState(CharacterState.STATES.IDLE);
     }
 
-    //protected override void OnDestroy()
-    //{
-    //    base.OnDestroy();
-    //}
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+    }
 
     private void ConnectInput(PlayerInput new_player_input)
     {
@@ -50,5 +53,25 @@ public class PlayerController : BaseCharacterController
             _ => null,
         };
         ChangeStateTo(new_state);
+    }
+    public override void CheckSteppedCell(Vector2Int cell_from, Vector2Int cell_to)
+    {
+        if (CellsSystem.ResourcesCells.ContainsKey(cell_to))
+        {
+            PickupResource(CellsSystem.ResourcesCells[cell_to]);
+        }
+    }
+
+    public void PickupResource(Item item)
+    {
+        if (picked_resources.ContainsKey(item.resourceData.tag))
+        {
+            picked_resources[item.resourceData.tag].count += item.count;
+        }
+        else
+        {
+            picked_resources[tag] = item;
+        }
+        CellsSystem.PickupResource(gridPosition);
     }
 }

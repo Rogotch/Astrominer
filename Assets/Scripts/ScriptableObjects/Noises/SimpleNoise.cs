@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Game/Simple Noise Data Layer")]
-public class SimpleNoise : BaseNoise
+[CreateAssetMenu(menuName = "Game/Noise/Simple Noise Data Layer")]
+public class SimpleNoise : BaseNoise, INoiseGenerator
 {
     [SerializeField] public bool addZeroSymmetry = false;
     public override float GenerateNoise(float x, float y)

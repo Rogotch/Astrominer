@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c3dfe95d04daf4eb7bb0e542bfa0f2, type: 3}
   m_Name: Asteroid
   m_EditorClassIdentifier: Assembly-CSharp::SimpleNoise
-  noise_scale: 0.0566
-  treshold: 0.438
+  noise_scale: 0.16
+  treshold: 0.35
   inversed_check: 0
   addZeroSymmetry: 0

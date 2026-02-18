@@ -68,7 +68,7 @@ public class Movement : BaseModule
 
     public bool IsCanMove(Vector2Int target)
     {
-        return Game.IsCellEmpty(target);
+        return CellsSystem.IsCellEmpty(target);
     }
 
     protected void StartMoving(Vector2Int from, Vector2Int target)

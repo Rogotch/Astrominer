@@ -29,8 +29,37 @@ public class BaseCharacterController : MonoBehaviour
     protected virtual void Awake()
     {
         //rigid_body = GetComponent<Rigidbody>();
+        ConnectMovement();
+    }
+
+    protected virtual void OnDestroy()
+    {
+        DisonnectMovement();
+    }
+
+    public virtual void ConnectMovement()
+    {
         movementModule = GetComponent<Movement>();
-        diggingTool    = GetComponent<DiggingInstrument>();
+        if (movementModule != null)
+        {
+            movementModule.MovingEnded += CheckSteppedCell;
+        }
+    }
+    public virtual void DisonnectMovement()
+    {
+        if (movementModule != null)
+        {
+            movementModule.MovingEnded -= CheckSteppedCell;
+        }
+    }
+    
+    public virtual void ConnectDiggingTool()
+    {
+        diggingTool = GetComponent<DiggingInstrument>();
+    }
+    public virtual void DisonnectDiggingTool()
+    {
+
     }
 
     public void ChangeStateTo(CharacterState newState)
@@ -41,4 +70,5 @@ public class BaseCharacterController : MonoBehaviour
     }
 
     public virtual void ChangeState(CharacterState.STATES state){}
+    public virtual void CheckSteppedCell(Vector2Int cell_from, Vector2Int cell_to){}
 }

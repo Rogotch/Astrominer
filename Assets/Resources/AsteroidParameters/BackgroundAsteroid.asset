@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cf258f3491aa547ba2bd0c3508f4b5, type: 3}
+  m_Name: BackgroundAsteroid
+  m_EditorClassIdentifier: Assembly-CSharp::DomainWarpedAsteroid
+  layerData:
+    noise: {fileID: 11400000, guid: 96a339c1e447e2841a49c5882d30d655, type: 2}
+    cell_data: {fileID: 11400000, guid: 3413f27ff62f62c44bc45b01d8ac4907, type: 2}
+    ores_data: []
+    additional: 0
+  radius: 30
+  center: {x: 50, y: 50}
+  warpStrength: 0.1
+  warpScale: 0.13
+  addSymmetry: 1
+  yOffset: 1000

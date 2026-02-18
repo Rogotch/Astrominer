@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class CircleAsteroid : AsteroidParameters
+[CreateAssetMenu(menuName = "Game/Asteroid Parameters/Circle")]
+public class CircleAsteroid : AsteroidParameters, INoiseGenerator
 {
     #region Переменные инспектора
     [Header("Размеры астероида")]
     [SerializeField] public int            radius;
     [SerializeField] public Vector2Int     center;
-    [Header("Параметры астероида")]
-    [SerializeField] public CellsDataLayer layerData;
     #endregion
 
     public override bool IsInsideAsteroid(Vector2Int position)
@@ -17,13 +16,20 @@ public class CircleAsteroid : AsteroidParameters
         float final_radius = radius + noise_value;
         return dist_to_center <= final_radius;
     }
-    public override float GetNoiseValue(Vector2Int position)
+    public virtual float GenerateNoise(Vector2Int position)
     {
-        return layerData.noise.GenerateNoise(position);
+        return GenerateNoise(position.x, position.y);
     }
-
-    public override bool NoiseCellCheck(Vector2Int position)
+    public override float GenerateNoise(float x, float y)
     {
-        return layerData.noise.NoiseCellCheck(position);
+        return layerData.noise.GenerateNoise(x, y);
+    }
+    public virtual bool NoiseCellCheck(Vector2Int position)
+    {
+        return NoiseCellCheck(position.x, position.y);
+    }
+    public override bool NoiseCellCheck(float x, float y)
+    {
+        return layerData.noise.NoiseCellCheck(x, y);
     }
 }

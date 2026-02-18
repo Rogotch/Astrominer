@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Common
   m_EditorClassIdentifier: Assembly-CSharp::BlocksResource
   tag: common
+  icon: {fileID: -2063266990163143804, guid: e5381c04c38abdc4997c8bfe38fc1937, type: 3}
   tile_variants:
     items:
     - _key: {x: 0, y: 0}
@@ -23,3 +24,4 @@ MonoBehaviour:
       _value: {fileID: 11400000, guid: 88021feaff20acf43ae5f9ed7d43498c, type: 2}
     - _key: {x: 1, y: 1}
       _value: {fileID: 11400000, guid: d7e833d1cff80c149a6db4cf2c0e85aa, type: 2}
+  scene_prefab: {fileID: 7423828785701815541, guid: 5809387ebf709994d809112e2edc7bf2, type: 3}

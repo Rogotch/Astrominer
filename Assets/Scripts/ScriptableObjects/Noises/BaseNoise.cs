@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class BaseNoise : ScriptableObject
+public abstract class BaseNoise : ScriptableObject, INoiseGenerator
 {
     [Range(0.01f, 0.2f)]
     public float noise_scale = 0.05f;

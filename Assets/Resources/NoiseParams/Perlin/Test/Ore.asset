@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Ore
   m_EditorClassIdentifier: Assembly-CSharp::NoiseDataLayer
   noise_scale: 0.2
+  treshold: 0.5
+  inversed_check: 0
+  addZeroSymmetry: 1
   octaves: 4
   persistence: 0.725
   lacunarity: 2.52
-  treshold: 0.785
-  inversed_check: 0
