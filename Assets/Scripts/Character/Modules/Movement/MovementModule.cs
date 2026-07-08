@@ -11,13 +11,13 @@ using UnityEngine.UIElements;
 
 public class Movement : BaseModule
 {
-    #region Сигналы
+    #region Actions
     public event Action<Vector2Int, Vector2Int> MovingStarted;
     public event Action<Vector2Int, Vector2Int> MovingEnded;
     public event Action<Vector2Int> OnPosition;
     #endregion
 
-    #region Переменные инспектора
+    #region SerializeFields
     [SerializeField]
     private float timeForStep = 1f;
     [SerializeField]
@@ -26,19 +26,19 @@ public class Movement : BaseModule
     private Ease  ease = Ease.InOutQuad;
     #endregion
 
-    #region Private-переменные
+    #region 
     //private Rigidbody2D rigid_body;
     //private Func<Vector2Int, bool> isCanMove = (target) => true;
     #endregion
 
-    #region Protected-переменные
+    #region Protecteds
     protected Tween      currentTween;
     protected Vector2Int startGridPosition;
     protected Vector2Int targetGridPosition;
     protected Vector3    targetPosition;
     #endregion
 
-    #region Public-переменные
+    #region Publics
     [SerializeField]
     [ReadOnly]
     public bool isMoving = false;
