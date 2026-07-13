@@ -9,7 +9,7 @@ public class BlocksResource : ScriptableObject
 {
     [SerializeField] public string               tag = "";
     [SerializeField] public Sprite               icon;
-    [SerializeField] public SDict_V2Int_TileBase tile_variants;
+    [SerializeField] public TileBase             resource_cell;
     [SerializeField] public GameObject           scene_prefab;
 
 

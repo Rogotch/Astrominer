@@ -31,7 +31,7 @@ public class TilemapLayers : MonoBehaviour
         break_cells.SetTile(new Vector3Int(position.x, position.y, 0), null);
     }
 
-    //Важно - перед вызовом этой функции в Game.CellsMap уже дожны произойти все изменения
+
     public void SetCell(Vector2Int position, Cell cell)
     {
         if (cell == null)
@@ -43,7 +43,8 @@ public class TilemapLayers : MonoBehaviour
 
         if (cell.cell_resource != null)
         {
-            TileBase resource_tile = cell.cell_resource.tile_variants.Dictionary[CellsSystem.GetCellNeighboursVector(position)];
+            TileBase resource_tile = cell.cell_resource.resource_cell;
+            // TileBase resource_tile = cell.cell_resource.tile_variants.Dictionary[CellsSystem.GetCellNeighboursVector(position)];
             tilemap_resources.SetTile(new Vector3Int(position.x, position.y, 0), resource_tile);
 
         }

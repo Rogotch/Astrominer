@@ -2,8 +2,8 @@ using UnityEngine;
 
 public abstract class AsteroidParameters : ScriptableObject, INoiseGenerator
 {
-    #region Переменные инспектора
-    [Header("Параметры астероида")]
+    #region Public
+    // [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] public CellsDataLayer layerData;
     #endregion
 

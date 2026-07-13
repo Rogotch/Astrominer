@@ -38,6 +38,10 @@ public class PlayerController : BaseCharacterController
         if (!context.performed) return;
         Vector2 raw_input = context.ReadValue<Vector2>();
         Vector2Int direction = new Vector2Int((int)raw_input.x, (int)raw_input.y);
+        if (direction.magnitude > 1)
+        {
+            direction.y = 0;
+        }
         (currentState as PlayerIdle)?.ReciveInputDirection(direction);
     }
 

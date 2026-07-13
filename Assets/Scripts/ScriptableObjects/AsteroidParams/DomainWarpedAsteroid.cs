@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 [CreateAssetMenu(menuName = "Game/Asteroid Parameters/Domain Warped")]
 public class DomainWarpedAsteroid : CircleAsteroid, INoiseGenerator
 {
-    #region Переменные инспектора
+    #region SerializeField
     [Header("Domain Warping")]
     [Range(0f, 1f),      SerializeField] protected float warpStrength;
     [Range(0.01f, 0.2f), SerializeField] protected float warpScale;

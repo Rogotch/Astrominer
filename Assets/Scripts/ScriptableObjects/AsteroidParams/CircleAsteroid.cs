@@ -3,8 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Game/Asteroid Parameters/Circle")]
 public class CircleAsteroid : AsteroidParameters, INoiseGenerator
 {
-    #region Переменные инспектора
-    [Header("Размеры астероида")]
+    #region SerializeField
+    // [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [SerializeField] public int            radius;
     [SerializeField] public Vector2Int     center;
     #endregion

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CommonCell
   m_EditorClassIdentifier: Assembly-CSharp::CellData
   max_health: 5
-  tile: {fileID: 11400000, guid: d54bbd9f6b375e448803bb17aac0e201, type: 2}
+  tile: {fileID: 1034110415799180320, guid: 4eea682cc96538a42afcc8259d2b8a44, type: 3}
   cell_resource: {fileID: 0}
