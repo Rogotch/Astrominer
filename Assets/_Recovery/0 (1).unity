@@ -2075,6 +2075,7 @@ MonoBehaviour:
   gridPosition: {x: 0, y: 0}
   movementModule: {fileID: 278754435}
   diggingTool: {fileID: 278754437}
+  delayed_command: {x: 0, y: 0}
 --- !u!114 &278754435
 MonoBehaviour:
   m_ObjectHideFlags: 0

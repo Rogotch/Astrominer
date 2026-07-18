@@ -37,6 +37,10 @@ public class BaseCharacterController : MonoBehaviour
         DisonnectMovement();
     }
 
+    protected virtual void Update()
+    {
+    }
+    
     public virtual void ConnectMovement()
     {
         movementModule = GetComponent<Movement>();

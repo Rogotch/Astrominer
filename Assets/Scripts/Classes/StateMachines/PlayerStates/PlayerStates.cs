@@ -1,22 +1,32 @@
-using UnityEditor.Experimental.GraphView;
+using System;
 using UnityEngine;
 
 public class PlayerIdle : CharacterIdle
 {
-    public PlayerIdle(PlayerController controller) : base(controller) {}
+    public PlayerIdle(Func<PlayerController> getController) : base(getController) {}
 
     public void ReciveInputDirection(Vector2Int direction)
     {
-        CharacterMove move_check = new CharacterMove(controller);
-        CharacterMine mine_check = new CharacterMine(controller);
+        (getController() as PlayerController).delayed_command = Vector2Int.zero;
 
-        if      (move_check.IsCanBeActivatedToDirection(controller.gridPosition, direction)) ActivateToDirection(STATES.MOVE, direction);
-        else if (mine_check.IsCanBeActivatedToDirection(controller.gridPosition, direction)) ActivateToDirection(STATES.MINE, direction);
+        CharacterMove move_check = new CharacterMove(getController);
+        CharacterMine mine_check = new CharacterMine(getController);
+
+        if      (move_check.IsCanBeActivatedToDirection(getController().gridPosition, direction)) ActivateToDirection(STATES.MOVE, direction);
+        else if (mine_check.IsCanBeActivatedToDirection(getController().gridPosition, direction)) ActivateToDirection(STATES.MINE, direction);
     }
 
     private void ActivateToDirection(STATES action, Vector2Int direction)
     {
-        controller.ChangeState(action);
-        (controller.currentState as CharacterTargetedState)?.Activate(controller.gridPosition, controller.gridPosition + direction);
+         getController().ChangeState(action);
+        (getController().currentState as CharacterTargetedState)?.Activate(getController().gridPosition, getController().gridPosition + direction);
+    }
+
+
+    public override void Enter()
+    {
+        PlayerController controller = (getController() as PlayerController);
+        base.Enter();
+        if (controller.delayed_command.magnitude > 0) ReciveInputDirection(controller.delayed_command);
     }
 }

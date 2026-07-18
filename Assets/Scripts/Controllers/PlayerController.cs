@@ -1,24 +1,28 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
+using VContainer;
 
 public class PlayerController : BaseCharacterController
 {
 
     #region Private variables
-    private PlayerInput player_input;
-    private Vector2Int delayed_command;
+    [Inject] private IInputService input;
+    // private PlayerInput player_input;
+    // private Vector2Int current_input;
     private Dictionary<string, Item> picked_resources = new Dictionary<string, Item>();
-
     #endregion
+    public Vector2Int delayed_command;
 
     protected override void Awake()
     {
         base.Awake();
-        ConnectInput(GetComponent<PlayerInput>());
+        input.OnMove += MoveInput;
+        // ConnectInput(GetComponent<PlayerInput>());
         CellsSystem.Player = this;
         ChangeState(CharacterState.STATES.IDLE);
     }
@@ -28,32 +32,32 @@ public class PlayerController : BaseCharacterController
         base.OnDestroy();
     }
 
-    private void ConnectInput(PlayerInput new_player_input)
+    protected override void Update()
     {
-        player_input = new_player_input;
+        base.Update();
     }
+    // private void ConnectInput(PlayerInput new_player_input)
+    // {
+    //     player_input = new_player_input;
+    // }
 
-    public void ReadMoveInput(InputAction.CallbackContext context)
+    public void MoveInput(Vector2Int move_vector)
     {
-        if (!context.performed) return;
-        Vector2 raw_input = context.ReadValue<Vector2>();
-        Vector2Int direction = new Vector2Int((int)raw_input.x, (int)raw_input.y);
-        if (direction.magnitude > 1)
-        {
-            direction.y = 0;
-        }
-        (currentState as PlayerIdle)?.ReciveInputDirection(direction);
+        if (move_vector.magnitude > 1) move_vector.y = 0;
+        if (currentState is not PlayerIdle) delayed_command = move_vector;
+        (currentState as PlayerIdle)?.ReciveInputDirection(move_vector);
     }
 
     public override void ChangeState(CharacterState.STATES state)
     {
+        Func<PlayerController> getPlayer = () => this;
         CharacterState new_state = state switch
         {
-            CharacterState.STATES.START_TURN => new CharacterTurnStarted(this),
-            CharacterState.STATES.IDLE       => new PlayerIdle(this),
-            CharacterState.STATES.MOVE       => new CharacterMove(this),
-            CharacterState.STATES.MINE       => new CharacterMine(this),
-            CharacterState.STATES.END_TURN   => new CharacterTurnEnded(this),
+            CharacterState.STATES.START_TURN => new CharacterTurnStarted(getPlayer),
+            CharacterState.STATES.IDLE       => new PlayerIdle          (getPlayer),
+            CharacterState.STATES.MOVE       => new CharacterMove       (getPlayer),
+            CharacterState.STATES.MINE       => new CharacterMine       (getPlayer),
+            CharacterState.STATES.END_TURN   => new CharacterTurnEnded  (getPlayer),
             _ => null,
         };
         ChangeStateTo(new_state);
