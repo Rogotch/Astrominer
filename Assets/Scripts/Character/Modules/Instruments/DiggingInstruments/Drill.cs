@@ -1,27 +1,13 @@
 using DG.Tweening;
 using System;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
-using static UnityEngine.GraphicsBuffer;
 
-public class Drill : DiggingInstrument
+public class Drill : BaseDigInstrument, IDigInstrument
 {
     #region Signals
     public override event Action<Vector2Int, Vector2Int> DiggingStarted;
     public override event Action<Vector2Int, Vector2Int> DiggingEnded;
-    public override event Action<Vector2Int> CellDigged;
-    #endregion
-
-    #region Private variables
-    [SerializeField]
-    private  float  drillDamage = 1.0f;
-    [SerializeField]
-    protected float timeForStep = 0.3f;
-    [SerializeField]
-    protected Ease  easeIn      = Ease.InQuad;
-    [SerializeField]
-    protected Ease  easeOut     = Ease.OutQuad;
+    public override event Action<Vector2Int>             CellDigged;
     #endregion
 
     public override void Dig(Vector2Int from, Vector2Int to)
@@ -36,7 +22,6 @@ public class Drill : DiggingInstrument
         Vector3    startPosition  = grid.CellToLocal(new Vector3Int(from.x, from.y, 0)) + grid.cellSize / 2;
 
         startPosition.z = transform.position.z;
-        isDigging = true;
 
         DiggingStarted?.Invoke(from, to);
         diggingTweenSequence = DOTween.Sequence();
@@ -55,8 +40,6 @@ public class Drill : DiggingInstrument
 
     public override void DiggingEnd(Vector2Int from, Vector2Int to)
     {
-        isDigging = false;
-
         diggingTweenSequence.Kill();
         diggingTweenSequence = null;
 

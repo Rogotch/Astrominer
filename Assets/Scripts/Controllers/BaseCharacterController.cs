@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using VContainer;
 
 public class BaseCharacterController : MonoBehaviour
 {
@@ -17,7 +18,12 @@ public class BaseCharacterController : MonoBehaviour
     public Vector2Int        gridPosition;
     public CharacterState    currentState;
     public Movement          movementModule;
-    public DiggingInstrument diggingTool;
+    // public DiggingInstrument diggingTool;
+    #endregion
+
+    #region Injections
+    [Inject] public IEquipmentService equipment;
+    [Inject] protected IDigToolFactory digToolFactory;
     #endregion
 
     #region Signals
@@ -57,10 +63,10 @@ public class BaseCharacterController : MonoBehaviour
         }
     }
     
-    public virtual void ConnectDiggingTool()
-    {
-        diggingTool = GetComponent<DiggingInstrument>();
-    }
+    // public virtual void ConnectDiggingTool()
+    // {
+    //     diggingTool = GetComponent<DiggingInstrument>();
+    // }
     public virtual void DisonnectDiggingTool()
     {
 

@@ -2,14 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PCInputService : IInputService
+public class PCPlayerInputService : IPlayerInputService
 {
     public event Action<Vector2Int> OnMove;
     public event Action<Vector2> OnCameraMove;
     public event Action OnPaused;
     private PlayerInputActions controls;
     
-    public PCInputService()
+    public PCPlayerInputService()
     {
         controls = new PlayerInputActions();
         controls.Player.Movement.performed += ReadMoveInput;

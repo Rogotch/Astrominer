@@ -89,15 +89,15 @@ public class CharacterMove : CharacterTargetedState
 }
 public class CharacterMine : CharacterTargetedState
 {
-    protected readonly Func<DiggingInstrument> getInstrument;
+    protected readonly Func<IDigInstrument> getInstrument;
     public   CharacterMine(Func<BaseCharacterController> getController) : base(getController)
     {
-        getInstrument = () => getController().diggingTool;
+        getInstrument = () => getController().equipment.currentDigTool;
     }
 
     public override void Enter()
     {
-        DiggingInstrument instrument = getInstrument();
+        IDigInstrument instrument = getInstrument();
         if (instrument == null) return;
 
         instrument.CellDigged      += Activated;
@@ -106,7 +106,7 @@ public class CharacterMine : CharacterTargetedState
     }
     public override void Exit()
     {
-        DiggingInstrument instrument = getInstrument();
+        IDigInstrument instrument = getInstrument();
         if (instrument == null) return;
 
         instrument.CellDigged      -= Activated;

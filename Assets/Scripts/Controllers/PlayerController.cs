@@ -11,7 +11,7 @@ public class PlayerController : BaseCharacterController
 {
 
     #region Private variables
-    [Inject] private IInputService input;
+    [Inject] private IPlayerInputService input;
     // private PlayerInput player_input;
     // private Vector2Int current_input;
     private Dictionary<string, Item> picked_resources = new Dictionary<string, Item>();
@@ -30,6 +30,12 @@ public class PlayerController : BaseCharacterController
     protected override void OnDestroy()
     {
         base.OnDestroy();
+        input.OnMove -= MoveInput;
+    }
+
+    public void EquipDigTool(IDigInstrument.ToolType toolType)
+    {
+        equipment.EquipTool(digToolFactory.Create(toolType));
     }
 
     protected override void Update()
