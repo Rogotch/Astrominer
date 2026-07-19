@@ -3,8 +3,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using VContainer;
+using VContainer.Unity;
 
-public class BaseCharacterController : MonoBehaviour
+public class BaseCharacterController : MonoBehaviour, IStartable, IDisposable
 {
     //#region Private variables
     ////private Rigidbody   rigid_body;
@@ -22,31 +23,26 @@ public class BaseCharacterController : MonoBehaviour
     #endregion
 
     #region Injections
-    [Inject] public IEquipmentService equipment;
-    [Inject] protected IDigToolFactory digToolFactory;
+    [Inject] private IEquipmentService        _equipment;
+    [Inject] private IDigToolFactory          _digToolFactory;
+    [Inject] private IAnimationServiceFactory _animFactory;
+    [Inject] private Grid                     _worldGrid;
     #endregion
+
+    public IEquipmentService         Equipment      => _equipment;
+    public IDigToolFactory           DigToolFactory => _digToolFactory;
+    public IAnimationServiceFactory  AnimFactory    => _animFactory;
+    public Grid                      WorldGrid      => _worldGrid;
 
     #region Signals
     public event Action<Vector2Int, Vector2Int> MovingStarted;
     public event Action<Vector2Int, Vector2Int> MovingEnded;
-    public event Action<Vector2Int> OnPosition;
+    public event Action<Vector2Int>             OnPosition;
     #endregion
-
-    protected virtual void Awake()
-    {
-        //rigid_body = GetComponent<Rigidbody>();
-        ConnectMovement();
-    }
-
-    protected virtual void OnDestroy()
-    {
-        DisonnectMovement();
-    }
-
-    protected virtual void Update()
-    {
-    }
     
+    public virtual void Start() { }
+    public virtual void Dispose() { }
+
     public virtual void ConnectMovement()
     {
         movementModule = GetComponent<Movement>();
@@ -81,4 +77,5 @@ public class BaseCharacterController : MonoBehaviour
 
     public virtual void ChangeState(CharacterState.STATES state){}
     public virtual void CheckSteppedCell(Vector2Int cell_from, Vector2Int cell_to){}
+
 }

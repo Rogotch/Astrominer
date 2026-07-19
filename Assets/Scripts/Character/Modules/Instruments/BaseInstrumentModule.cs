@@ -1,7 +1,12 @@
 using UnityEngine;
 using VContainer;
 
-public class BaseInstrumentModule : BaseModule
+public abstract class BaseInstrumentModule : BaseModule
 {
-    [Inject] protected Grid grid;
+    protected readonly Grid grid;
+
+    protected BaseInstrumentModule(Grid grid)
+    {
+        this.grid = grid;
+    }
 }

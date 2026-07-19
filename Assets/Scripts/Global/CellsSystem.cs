@@ -24,7 +24,7 @@ public static class CellsSystem
 
     public static PlayerController Player;
 
-    #region Сигналы
+    #region Actions
     public static event Action<Vector2Int, float>   CellDamaged;
     public static event Action<Vector2Int>          CellDestroyed;
     public static event Action<Vector2Int, Item>    ResourceDropped;
@@ -77,7 +77,7 @@ public static class CellsSystem
         if (IsCellEmpty(cell))
             return;
 
-        //Сюда добавить выпадение ресурсов
+        //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (cells_map[cell].cell_resource != null)
         {
             BlocksResource resource = cells_map[cell].cell_resource;

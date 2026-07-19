@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System;
 using UnityEngine;
+using VContainer;
 
 public class Drill : BaseDigInstrument, IDigInstrument
 {
@@ -10,39 +11,19 @@ public class Drill : BaseDigInstrument, IDigInstrument
     public override event Action<Vector2Int>             CellDigged;
     #endregion
 
+
+    public float drillDamage = 1f;
+
+    public Drill(Grid grid) : base(grid) { }
+    
     public override void Dig(Vector2Int from, Vector2Int to)
     {
+        Debug.Log($"grid {grid}");
         DiggingStart(from, to);
-    }
-
-    public override void DiggingStart(Vector2Int from, Vector2Int to)
-    {
-        Vector2Int direction      = to - from;
-        Vector3    offset         = new Vector3(direction.x * (grid.cellSize.x / 5), direction.y * (grid.cellSize.y / 5), 0);
-        Vector3    startPosition  = grid.CellToLocal(new Vector3Int(from.x, from.y, 0)) + grid.cellSize / 2;
-
-        startPosition.z = transform.position.z;
-
-        DiggingStarted?.Invoke(from, to);
-        diggingTweenSequence = DOTween.Sequence();
-        diggingTweenSequence.Append(transform
-            .DOMove(startPosition + offset, timeForStep)
-            .SetEase(easeIn)
-            .OnComplete(() => DigCell(from, to)));
-        diggingTweenSequence.Append(transform
-            .DOMove(startPosition,          timeForStep)
-            .SetEase(easeOut)
-            .OnComplete(() => DiggingEnd(from, to)));
-        diggingTweenSequence.Play();
-        //    .SetEase(ease)
-        //    .OnComplete(EndMoving);
     }
 
     public override void DiggingEnd(Vector2Int from, Vector2Int to)
     {
-        diggingTweenSequence.Kill();
-        diggingTweenSequence = null;
-
         DiggingEnded?.Invoke(from, to);
     }
 

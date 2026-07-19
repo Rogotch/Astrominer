@@ -2,7 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
-public class BaseDigInstrument : BaseInstrumentModule, IDigInstrument
+public abstract class BaseDigInstrument : BaseInstrumentModule, IDigInstrument
 {
     protected Sequence diggingTweenSequence;
 
@@ -12,6 +12,8 @@ public class BaseDigInstrument : BaseInstrumentModule, IDigInstrument
     protected Ease  easeIn      = Ease.InQuad;
     protected Ease  easeOut     = Ease.OutQuad;
     #endregion
+
+    protected BaseDigInstrument(Grid grid) : base(grid) {}
 
     public virtual event Action<Vector2Int, Vector2Int> DiggingStarted;
     public virtual event Action<Vector2Int, Vector2Int> DiggingEnded;

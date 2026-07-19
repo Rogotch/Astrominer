@@ -6,42 +6,39 @@ using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
 using VContainer;
+using VContainer.Unity;
 
-public class PlayerController : BaseCharacterController
+public class PlayerController : BaseCharacterController, IStartable, IDisposable
 {
+    #region Injections
+    [Inject] private IPlayerInputService input;
+    #endregion
 
     #region Private variables
-    [Inject] private IPlayerInputService input;
-    // private PlayerInput player_input;
-    // private Vector2Int current_input;
+    private IAnimationService animationService;
     private Dictionary<string, Item> picked_resources = new Dictionary<string, Item>();
     #endregion
     public Vector2Int delayed_command;
 
-    protected override void Awake()
+    public override void Start()
     {
-        base.Awake();
-        input.OnMove += MoveInput;
-        // ConnectInput(GetComponent<PlayerInput>());
+        base.Start();
         CellsSystem.Player = this;
         ChangeState(CharacterState.STATES.IDLE);
+        input.OnMove += MoveInput;
+        Debug.Log($"players grid {WorldGrid}");
+        animationService = AnimFactory.Create(WorldGrid, transform);
     }
-
-    protected override void OnDestroy()
+    public override void Dispose()
     {
-        base.OnDestroy();
+        base.Dispose();
         input.OnMove -= MoveInput;
     }
-
     public void EquipDigTool(IDigInstrument.ToolType toolType)
     {
-        equipment.EquipTool(digToolFactory.Create(toolType));
+        Equipment.EquipTool(DigToolFactory.Create(toolType));
     }
 
-    protected override void Update()
-    {
-        base.Update();
-    }
     // private void ConnectInput(PlayerInput new_player_input)
     // {
     //     player_input = new_player_input;
@@ -49,6 +46,7 @@ public class PlayerController : BaseCharacterController
 
     public void MoveInput(Vector2Int move_vector)
     {
+        Debug.Log($"recive input {move_vector}, current state {currentState}");
         if (move_vector.magnitude > 1) move_vector.y = 0;
         if (currentState is not PlayerIdle) delayed_command = move_vector;
         (currentState as PlayerIdle)?.ReciveInputDirection(move_vector);
@@ -88,4 +86,5 @@ public class PlayerController : BaseCharacterController
         }
         CellsSystem.PickupResource(gridPosition);
     }
+
 }

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PCPlayerInputService : IPlayerInputService
+public class PCPlayerInputService : IPlayerInputService, IDisposable
 {
     public event Action<Vector2Int> OnMove;
     public event Action<Vector2> OnCameraMove;
@@ -11,8 +11,15 @@ public class PCPlayerInputService : IPlayerInputService
     
     public PCPlayerInputService()
     {
+
         controls = new PlayerInputActions();
         controls.Player.Movement.performed += ReadMoveInput;
+        controls.Enable();
+    }
+    public void Dispose()
+    {
+        controls.Player.Movement.performed -= ReadMoveInput;
+        controls.Dispose();
     }
     public void ReadMoveInput(InputAction.CallbackContext context)
     {
@@ -24,4 +31,5 @@ public class PCPlayerInputService : IPlayerInputService
         if (direction.magnitude > 1) direction.y = 0;
         OnMove.Invoke(direction);
     }
+
 }

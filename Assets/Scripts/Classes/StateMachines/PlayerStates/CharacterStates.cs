@@ -92,7 +92,7 @@ public class CharacterMine : CharacterTargetedState
     protected readonly Func<IDigInstrument> getInstrument;
     public   CharacterMine(Func<BaseCharacterController> getController) : base(getController)
     {
-        getInstrument = () => getController().equipment.currentDigTool;
+        getInstrument = () => getController().Equipment.currentDigTool;
     }
 
     public override void Enter()
