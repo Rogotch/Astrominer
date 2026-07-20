@@ -4,16 +4,7 @@ using UnityEngine;
 
 public abstract class BaseDigInstrument : BaseInstrumentModule, IDigInstrument
 {
-    protected Sequence diggingTweenSequence;
-
-    #region Setting variables
-    protected float drillDamage = 1.0f;
-    protected float timeForStep = 0.3f;
-    protected Ease  easeIn      = Ease.InQuad;
-    protected Ease  easeOut     = Ease.OutQuad;
-    #endregion
-
-    protected BaseDigInstrument(Grid grid) : base(grid) {}
+    protected BaseDigInstrument(Grid grid, IAnimationService animationService) : base(grid, animationService) {}
 
     public virtual event Action<Vector2Int, Vector2Int> DiggingStarted;
     public virtual event Action<Vector2Int, Vector2Int> DiggingEnded;

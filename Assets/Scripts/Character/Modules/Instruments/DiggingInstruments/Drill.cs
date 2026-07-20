@@ -14,24 +14,32 @@ public class Drill : BaseDigInstrument, IDigInstrument
 
     public float drillDamage = 1f;
 
-    public Drill(Grid grid) : base(grid) { }
+    public Drill(Grid grid, IAnimationService animationService) : base(grid, animationService) {}
     
     public override void Dig(Vector2Int from, Vector2Int to)
     {
-        Debug.Log($"grid {grid}");
-        DiggingStart(from, to);
+        animationService.Digging(
+            from, 
+            to, 
+            () => DiggingStart(from, to),
+            () => DigCell(from, to),
+            () => DiggingEnd(from, to));
     }
 
-    public override void DiggingEnd(Vector2Int from, Vector2Int to)
+    public override void DiggingStart(Vector2Int from, Vector2Int to)
     {
-        DiggingEnded?.Invoke(from, to);
+        DiggingStarted?.Invoke(from, to);
     }
-
     public override void DigCell(Vector2Int from, Vector2Int cell)
     {
         CellsSystem.DamageCell(cell, drillDamage);
         CellDigged?.Invoke(cell);
     }
+    public override void DiggingEnd(Vector2Int from, Vector2Int to)
+    {
+        DiggingEnded?.Invoke(from, to);
+    }
+
 
     public override bool IsCanDig(Vector2Int target)
     {

@@ -12,6 +12,7 @@ public class GameplayLifetimeScope : LifetimeScope
         builder.RegisterEntryPoint<LevelEntryPoint>();
         builder.Register<PlayerLifetimeScope>(Lifetime.Scoped);
         builder.Register<IAnimationServiceFactory, AnimationServiceFactory>(Lifetime.Singleton);
+        builder.Register<IMovementServiceFactory, MovementServiceFactory>(Lifetime.Singleton);
         builder.RegisterComponent(grid);
     }
 }

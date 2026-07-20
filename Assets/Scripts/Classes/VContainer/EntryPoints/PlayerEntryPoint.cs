@@ -14,7 +14,6 @@ public class PlayerEntryPoint : IStartable
     }
     public void Start()
     {
-        player.EquipDigTool(IDigInstrument.ToolType.DRILL);
         Debug.Log("Game started with DI");
     }
 }

@@ -12,13 +12,10 @@ public class BaseCharacterController : MonoBehaviour, IStartable, IDisposable
     ////private Vector2Int  old_position;
     //#endregion
 
-    //#region Protected variables
-    //#endregion
 
     #region Public variables
     public Vector2Int        gridPosition;
     public CharacterState    currentState;
-    public Movement          movementModule;
     // public DiggingInstrument diggingTool;
     #endregion
 
@@ -26,38 +23,35 @@ public class BaseCharacterController : MonoBehaviour, IStartable, IDisposable
     [Inject] private IEquipmentService        _equipment;
     [Inject] private IDigToolFactory          _digToolFactory;
     [Inject] private IAnimationServiceFactory _animFactory;
+    [Inject] private IMovementServiceFactory  _moveFactory;
     [Inject] private Grid                     _worldGrid;
-    #endregion
 
     public IEquipmentService         Equipment      => _equipment;
     public IDigToolFactory           DigToolFactory => _digToolFactory;
     public IAnimationServiceFactory  AnimFactory    => _animFactory;
+    public IMovementServiceFactory   MoveFactory    => _moveFactory;
     public Grid                      WorldGrid      => _worldGrid;
+    #endregion
+
+    #region Protected variables
+    protected IAnimationService animationService;
+    protected IMovementService  moveService;
+    #endregion
 
     #region Signals
     public event Action<Vector2Int, Vector2Int> MovingStarted;
     public event Action<Vector2Int, Vector2Int> MovingEnded;
     public event Action<Vector2Int>             OnPosition;
     #endregion
+    public Func<IMovementService> getMovementService;
     
-    public virtual void Start() { }
+    public virtual void Start()
+    {
+        animationService   = AnimFactory.Create(WorldGrid, transform);
+        moveService        = MoveFactory.Create(WorldGrid, transform);
+        getMovementService =  () => moveService;
+    }
     public virtual void Dispose() { }
-
-    public virtual void ConnectMovement()
-    {
-        movementModule = GetComponent<Movement>();
-        if (movementModule != null)
-        {
-            movementModule.MovingEnded += CheckSteppedCell;
-        }
-    }
-    public virtual void DisonnectMovement()
-    {
-        if (movementModule != null)
-        {
-            movementModule.MovingEnded -= CheckSteppedCell;
-        }
-    }
     
     // public virtual void ConnectDiggingTool()
     // {

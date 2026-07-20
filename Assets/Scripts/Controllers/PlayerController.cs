@@ -15,28 +15,29 @@ public class PlayerController : BaseCharacterController, IStartable, IDisposable
     #endregion
 
     #region Private variables
-    private IAnimationService animationService;
     private Dictionary<string, Item> picked_resources = new Dictionary<string, Item>();
     #endregion
     public Vector2Int delayed_command;
+
 
     public override void Start()
     {
         base.Start();
         CellsSystem.Player = this;
+        EquipDigTool(IDigInstrument.ToolType.DRILL);
+        input.OnMove            += MoveInput;
+        moveService.MovingEnded += CheckSteppedCell;
         ChangeState(CharacterState.STATES.IDLE);
-        input.OnMove += MoveInput;
-        Debug.Log($"players grid {WorldGrid}");
-        animationService = AnimFactory.Create(WorldGrid, transform);
     }
     public override void Dispose()
     {
         base.Dispose();
         input.OnMove -= MoveInput;
+        moveService.MovingEnded -= CheckSteppedCell;
     }
     public void EquipDigTool(IDigInstrument.ToolType toolType)
     {
-        Equipment.EquipTool(DigToolFactory.Create(toolType));
+        Equipment.EquipTool(DigToolFactory.Create(toolType, animationService));
     }
 
     // private void ConnectInput(PlayerInput new_player_input)
@@ -46,7 +47,6 @@ public class PlayerController : BaseCharacterController, IStartable, IDisposable
 
     public void MoveInput(Vector2Int move_vector)
     {
-        Debug.Log($"recive input {move_vector}, current state {currentState}");
         if (move_vector.magnitude > 1) move_vector.y = 0;
         if (currentState is not PlayerIdle) delayed_command = move_vector;
         (currentState as PlayerIdle)?.ReciveInputDirection(move_vector);

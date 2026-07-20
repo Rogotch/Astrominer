@@ -45,15 +45,15 @@ public class CharacterTurnEnded: CharacterState
 
 public class CharacterMove : CharacterTargetedState
 {
-    protected readonly Func<Movement> getMovement;
+    protected readonly Func<IMovementService> getMovement;
     public   CharacterMove(Func<BaseCharacterController> getController) : base(getController)
     {
-        getMovement = () => getController().movementModule;
+        getMovement = () => getController().getMovementService();
     }
 
     public override void Enter()
     {
-        Movement movement = getMovement();
+        IMovementService movement = getMovement();
         if (movement == null) return;
         movement.OnPosition    += Activated;
         movement.MovingStarted += Started;
@@ -61,7 +61,7 @@ public class CharacterMove : CharacterTargetedState
     }
     public override void Exit()
     {
-        Movement movement = getMovement();
+        IMovementService movement = getMovement();
         if (movement == null) return;
         movement.OnPosition    -= Activated;
         movement.MovingStarted -= Started;

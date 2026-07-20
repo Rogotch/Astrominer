@@ -3,7 +3,7 @@ using UnityEngine;
 
 public interface IDigToolFactory
 {
-    IDigInstrument Create(IDigInstrument.ToolType type);
+    IDigInstrument Create(IDigInstrument.ToolType type, IAnimationService animService);
 }
 
 public class DigToolFactory : IDigToolFactory
@@ -14,11 +14,11 @@ public class DigToolFactory : IDigToolFactory
         this.grid = grid;
     }
 
-    public IDigInstrument Create(IDigInstrument.ToolType type)
+    public IDigInstrument Create(IDigInstrument.ToolType type, IAnimationService animService)
     {
         return type switch
         {
-            IDigInstrument.ToolType.DRILL => new Drill(grid),
+            IDigInstrument.ToolType.DRILL => new Drill(grid, animService),
             _ => throw new ArgumentException($"Unknown tool type: {type}")
         };
     }
