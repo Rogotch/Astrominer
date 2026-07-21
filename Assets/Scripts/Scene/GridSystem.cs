@@ -1,21 +1,19 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
-using static UnityEditor.Experimental.GraphView.GraphView;
+using VContainer;
 
 public class GridSystem : MonoBehaviour
 {
+    #region Injections
+    [Inject] private AsteroidConfig       asteroidConfig;
+    [Inject] private ICellsService        cellsSystem;
+    #endregion
+
     #region Inspector's variables
-    [SerializeField] private Vector2Int            start_position        = Vector2Int.zero;
     [Header("Asteroid Size")]
     [SerializeField] private int                   width                 = 200;
     [SerializeField] private int                   height                = 200;
-    [Header("Asteroid data")]
-    [SerializeField] private AsteroidParameters    asteroid_background;
-    [SerializeField] private AsteroidParameters    asteroid_data;
-    [SerializeField] private CellsDataLayer[]      layers;
     [Header("Tilemaps")]
     [SerializeField] private TilemapLayers         tilemap_background;
     [SerializeField] private TilemapLayers         tilemap_main;
@@ -27,59 +25,32 @@ public class GridSystem : MonoBehaviour
     private Grid    grid;
     #endregion
 
-    #region Public variables
-    //public Dictionary<Vector2Int, Cell> cells_map;
-    #endregion
-
-    #region Enums
-    //enum CellType {Base, Hard, Resource}
-    #endregion
-
     private void Start()
     {
         GenerateCave();
         ConnectCellsMap();
-        ConnectPlayer(CellsSystem.Player);
         grid = GetComponent<Grid>();
-        SetUpPlayer();
     }
 
     private void OnDestroy()
     {
         DisconnectCellsMap();
-        DisconnectPlayer(CellsSystem.Player);
     }
 
     #region Connections
-    private void ConnectPlayer(PlayerController player)
-    {
-        player.MovingStarted += StartPlayerMove;
-        player.MovingEnded   += EndPlayerMove;
-    }
     private void ConnectCellsMap()
     {
-        CellsSystem.CellDamaged     += CellDamaged;
-        CellsSystem.CellDestroyed   += CellDestroyed;
-        CellsSystem.ResourceDropped += ResourceDropped;
+        cellsSystem.CellDamaged     += CellDamaged;
+        cellsSystem.CellDestroyed   += CellDestroyed;
+        cellsSystem.ResourceDropped += ResourceDropped;
     }
-    private void DisconnectPlayer(PlayerController player)
+        private void DisconnectCellsMap()
     {
-        player.MovingStarted -= StartPlayerMove;
-        player.MovingEnded   -= EndPlayerMove;
-    }
-    private void DisconnectCellsMap()
-    {
-        CellsSystem.CellDamaged     -= CellDamaged;
-        CellsSystem.CellDestroyed   -= CellDestroyed;
-        CellsSystem.ResourceDropped -= ResourceDropped;
+        cellsSystem.CellDamaged     -= CellDamaged;
+        cellsSystem.CellDestroyed   -= CellDestroyed;
+        cellsSystem.ResourceDropped -= ResourceDropped;
     }
     #endregion
-
-    public void SetUpPlayer()
-    {
-        CellsSystem.Player.transform.position = grid.CellToLocal(new Vector3Int(start_position.x, start_position.y)) + grid.cellSize / 2;
-        CellsSystem.Player.gridPosition = start_position;
-    }
 
     [ContextMenu("Clear tiles")]
     public void ClearTiles()
@@ -93,8 +64,8 @@ public class GridSystem : MonoBehaviour
     public void GenerateCave()
     {
         Debug.Log("Generate");
-        CellsSystem.BackgroundCells.Clear();
-        CellsSystem.CellsMap.Clear();
+        cellsSystem.BackgroundCells.Clear();
+        cellsSystem.CellsMap.Clear();
 
         ClearTiles();
 
@@ -102,36 +73,33 @@ public class GridSystem : MonoBehaviour
         Dictionary<Vector2Int, Cell> background_cells = new Dictionary<Vector2Int, Cell>();
 
         GenerateLayer(
-            asteroid_data.layerData,
-            asteroid_data,
+            asteroidConfig.asteroidData.layerData,
+            asteroidConfig.asteroidData,
             CheckCellAsteroid,
             ref asteroid_cells);
 
         GenerateLayer(
-            asteroid_background.layerData,
-            asteroid_background,
+            asteroidConfig.asteroidDataBackground.layerData,
+            asteroidConfig.asteroidDataBackground,
             CheckCellAsteroid,
             ref background_cells);
 
-        //���� ���������� ��� ���� � ���������� ���� ������ �������
-        foreach (CellsDataLayer layer in layers)
+        foreach (CellsDataLayer layer in asteroidConfig.cellsDataLayers)
             GenerateLayer(
                 layer,
-                asteroid_data,
+                asteroidConfig.asteroidData,
                 CheckCellLayer,
                 ref asteroid_cells);
 
         foreach (Vector2Int position in asteroid_cells.Keys)
-            CellsSystem.CellsMap[position]        =   asteroid_cells[position];
+            cellsSystem.CellsMap[position]        =   asteroid_cells[position];
 
         foreach (Vector2Int position in background_cells.Keys)
-            CellsSystem.BackgroundCells[position] = background_cells[position];
+            cellsSystem.BackgroundCells[position] = background_cells[position];
 
         DrawMap();
     }
 
-    //NoiseDataLayer (� ��� ���������� CellsDataLayer � OresDataLayer) - ������������ �� ���� ����� ���������� ��� ��������� ���� PerlinNoise
-    //GenerateLayer ���������� ������� <Vector2Int, Cell> ������ �������� ���������� ���� � ����� �� ��������� ��� ���������� ���������
     private void GenerateLayer(
         CellsDataLayer layer,
         AsteroidParameters parameters,
@@ -154,7 +122,6 @@ public class GridSystem : MonoBehaviour
 
     private void GenereateCell(Vector2Int position, INoiseGenerator noise_checker, CellsDataLayer layer, ref Dictionary<Vector2Int, Cell> cells)
     {
-        // ���������, ��������� �� �������� ���� �� ������� ������
         if (!noise_checker.NoiseCellCheck(position.x, position.y)) return;
         Cell cell = new Cell(layer.cell_data.GetCell());
 
@@ -168,55 +135,24 @@ public class GridSystem : MonoBehaviour
 
     private bool CheckCellLayer(Vector2Int position, AsteroidParameters checked_params, CellsDataLayer cell_layer, Dictionary<Vector2Int, Cell> cells)
     {
-        return (checked_params.IsInsideAsteroid(position) &&                  // ���� ������ � ������e ���������
-               (cells.ContainsKey(position) || cell_layer.additional));       // � ���� ���� ����������� ������� ��� ��� ���� ����������
+        return (checked_params.IsInsideAsteroid(position) &&                
+               (cells.ContainsKey(position) || cell_layer.additional));
     }
     
     private bool CheckCellAsteroid(Vector2Int position, AsteroidParameters checked_params, CellsDataLayer cell_layer, Dictionary<Vector2Int, Cell> cells)
     {
-        return checked_params.IsInsideAsteroid(position);                     // ���� ������ � ������e ���������
+        return checked_params.IsInsideAsteroid(position);
     }
 
     private void DrawMap()
     {
-        tilemap_background.SetMultipleCells(CellsSystem.BackgroundCells);
-        tilemap_main.SetMultipleCells(CellsSystem.CellsMap);
+        tilemap_background.SetMultipleCells(cellsSystem.BackgroundCells);
+        tilemap_main.SetMultipleCells(cellsSystem.CellsMap);
     }
-
-    private void StartPlayerMove(Vector2Int from, Vector2Int to)
-    {
-        //Vector2Int target_displayed_cell = from + Vector2Int.down;
-        //Debug.Log($"Move from {from} to {to}, has cell = {Game.CellsMap.ContainsKey(target_displayed_cell)}");
-        //if (Game.CellsMap.ContainsKey(target_displayed_cell))
-        //{
-        //    Debug.Log("StartPlayerMove");
-        //}
-
-        //RemoveCellFromTopLayer(from + Vector2Int.down);
-    }
-    private void EndPlayerMove(Vector2Int from, Vector2Int to)
-    {
-        //SetCellOnTopLayer(to + Vector2Int.down);
-    }
-    
-    //private void RemoveCellFromTopLayer(Vector2Int position)
-    //{
-    //    if (Game.CellsMap.ContainsKey(position))
-    //    {
-    //        tilemap_top.SetCell(position, null);
-    //    }
-    //}
-    //private void SetCellOnTopLayer(Vector2Int position)
-    //{
-    //    if (Game.CellsMap.ContainsKey(position))
-    //    {
-    //        tilemap_top.SetCell(position, Game.CellsMap[position]);
-    //    }
-    //}
 
     private void CellDamaged(Vector2Int tile, float damage)
     {
-        tilemap_main.SetDamageToCell(tile, CellsSystem.GetCell(tile));
+        tilemap_main.SetDamageToCell(tile, cellsSystem.GetCell(tile));
     }
 
     private void CellDestroyed(Vector2Int tile)

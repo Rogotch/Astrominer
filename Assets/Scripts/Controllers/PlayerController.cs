@@ -23,7 +23,6 @@ public class PlayerController : BaseCharacterController, IStartable, IDisposable
     public override void Start()
     {
         base.Start();
-        CellsSystem.Player = this;
         EquipDigTool(IDigInstrument.ToolType.DRILL);
         input.OnMove            += MoveInput;
         moveService.MovingEnded += CheckSteppedCell;

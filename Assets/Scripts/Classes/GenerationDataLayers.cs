@@ -1,5 +1,10 @@
 using UnityEngine;
 
+// [CreateAssetMenu(fileName = "CellsDataLayersArray", menuName = "Game/Configs/Cells Data Layers Array")]
+// public class CellsDataLayersArray : ScriptableObject
+// {
+//     public CellsDataLayer[] cellsDataLayers;
+// }
 [System.Serializable]
 public class CellsDataLayer : GenerationDataLayer
 {

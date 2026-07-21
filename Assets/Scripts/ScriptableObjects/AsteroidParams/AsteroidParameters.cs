@@ -1,9 +1,9 @@
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "AsteroidParameters", menuName = "Game/AsteroidParameters")]
 public abstract class AsteroidParameters : ScriptableObject, INoiseGenerator
 {
     #region Public
-    // [Header("��������� ���������")]
     [SerializeField] public CellsDataLayer layerData;
     #endregion
 

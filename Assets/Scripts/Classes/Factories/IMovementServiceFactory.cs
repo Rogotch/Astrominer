@@ -8,12 +8,14 @@ public interface IMovementServiceFactory
 public class MovementServiceFactory : IMovementServiceFactory
 {
     private readonly TweenMoveConfig config;
-    public MovementServiceFactory(MainConfig mainConfig)
+    private readonly ICellsService   cellsService;
+    public MovementServiceFactory(MainConfig mainConfig, ICellsService cellsService)
     {
         config = mainConfig.tweenMovement;
+        this.cellsService = cellsService;
     }
     public IMovementService Create(Grid grid, Transform character)
     {
-        return new TweenMovement(grid, character, config);
+        return new TweenMovement(grid, character, config, cellsService);
     }
 }

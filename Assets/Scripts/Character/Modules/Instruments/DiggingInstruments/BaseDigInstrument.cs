@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class BaseDigInstrument : BaseInstrumentModule, IDigInstrument
 {
-    protected BaseDigInstrument(Grid grid, IAnimationService animationService) : base(grid, animationService) {}
+    protected BaseDigInstrument(Grid grid, IAnimationService animationService, ICellsService cellsSystem) : base(grid, animationService, cellsSystem) {}
 
     public virtual event Action<Vector2Int, Vector2Int> DiggingStarted;
     public virtual event Action<Vector2Int, Vector2Int> DiggingEnded;

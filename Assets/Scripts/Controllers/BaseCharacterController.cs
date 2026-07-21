@@ -25,12 +25,14 @@ public class BaseCharacterController : MonoBehaviour, IStartable, IDisposable
     [Inject] private IAnimationServiceFactory _animFactory;
     [Inject] private IMovementServiceFactory  _moveFactory;
     [Inject] private Grid                     _worldGrid;
+    [Inject] private ICellsService            _cellsSystem;
 
     public IEquipmentService         Equipment      => _equipment;
     public IDigToolFactory           DigToolFactory => _digToolFactory;
     public IAnimationServiceFactory  AnimFactory    => _animFactory;
     public IMovementServiceFactory   MoveFactory    => _moveFactory;
     public Grid                      WorldGrid      => _worldGrid;
+    public ICellsService             CellsSystem    => _cellsSystem;
     #endregion
 
     #region Protected variables
@@ -71,5 +73,11 @@ public class BaseCharacterController : MonoBehaviour, IStartable, IDisposable
 
     public virtual void ChangeState(CharacterState.STATES state){}
     public virtual void CheckSteppedCell(Vector2Int cell_from, Vector2Int cell_to){}
+
+    public virtual void SetCharacterOnCell(Vector2Int position)
+    {
+        transform.position = WorldGrid.CellToLocal(new Vector3Int(position.x, position.y)) + WorldGrid.cellSize / 2;
+        gridPosition = position;
+    }
 
 }

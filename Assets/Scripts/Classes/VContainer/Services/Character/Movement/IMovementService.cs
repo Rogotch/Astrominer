@@ -28,8 +28,9 @@ public abstract class BaseMovement : IMovementService
     #endregion
 
     #region Injections
-    protected readonly Grid grid;
-    protected readonly Transform transform;
+    protected readonly Grid          grid;
+    protected readonly Transform     transform;
+    protected readonly ICellsService cellsService;
     #endregion
 
     #region Protecteds
@@ -38,10 +39,11 @@ public abstract class BaseMovement : IMovementService
     protected Vector3    targetPosition;
     #endregion
     
-    protected BaseMovement(Grid grid, Transform transform)
+    protected BaseMovement(Grid grid, Transform transform, ICellsService cellsService)
     {
-        this.grid = grid;
-        this.transform = transform;
+        this.grid         = grid;
+        this.transform    = transform;
+        this.cellsService = cellsService;
     }
 
     public abstract bool IsCanMove(Vector2Int target);

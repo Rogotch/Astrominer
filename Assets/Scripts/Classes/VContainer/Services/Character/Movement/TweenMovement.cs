@@ -10,14 +10,14 @@ public class TweenMovement : BaseMovement, IMovementService
     
     private readonly TweenMoveConfig config;
     protected Tween      currentTween;
-    public TweenMovement(Grid grid, Transform transform, TweenMoveConfig config) : base(grid, transform)
+    public TweenMovement(Grid grid, Transform transform, TweenMoveConfig config, ICellsService cellsService) : base(grid, transform, cellsService)
     {
         this.config = config;
     }
 
     public override bool IsCanMove(Vector2Int target)
     {
-        return CellsSystem.IsCellEmpty(target);
+        return cellsService.IsCellEmpty(target);
     }
 
     public override void MoveTo(Vector2Int from, Vector2Int target)
