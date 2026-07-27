@@ -23,6 +23,8 @@ public interface ICellsService
     public abstract void       DestroyCell             (Vector2Int cell);
     public abstract void       DropResource            (Vector2Int on_cell, Item resource);
     public abstract void       PickupResource          (Vector2Int from_cell);
+    public abstract Vector3    GetCellWorldPosition    (Vector2Int from_cell);
+    public abstract Vector2Int GetCellMapPosition      (Vector3    cell);
 }
 
 public abstract class BaseCellsService : ICellsService
@@ -35,7 +37,7 @@ public abstract class BaseCellsService : ICellsService
     public abstract  Dictionary<Vector2Int, Cell> BackgroundCells   { get;}
     public abstract  Dictionary<Vector2Int, Item> ResourcesCells    { get;}
 
-    protected readonly PlayerController player;
+    protected readonly Grid             grid;
 
     #region Actions
     public abstract event Action<Vector2Int, float>   CellDamaged;
@@ -44,7 +46,7 @@ public abstract class BaseCellsService : ICellsService
     public abstract event Action<Vector2Int>          ResourcePicked;
     #endregion
 
-    protected BaseCellsService(PlayerController player) { this.player = player;}
+    protected BaseCellsService(Grid grid) {this.grid = grid; }
 
     public abstract Vector2Int GetCellNeighboursVector (Vector2Int position);
     public abstract Cell       GetCell                 (Vector2Int position);
@@ -54,4 +56,6 @@ public abstract class BaseCellsService : ICellsService
     public abstract void       DestroyCell             (Vector2Int cell);
     public abstract void       DropResource            (Vector2Int on_cell, Item resource);
     public abstract void       PickupResource          (Vector2Int from_cell);
+    public abstract Vector3    GetCellWorldPosition    (Vector2Int from_cell);
+    public abstract Vector2Int GetCellMapPosition      (Vector3    cell);
 }

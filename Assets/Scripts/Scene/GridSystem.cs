@@ -6,8 +6,10 @@ using VContainer;
 public class GridSystem : MonoBehaviour
 {
     #region Injections
-    [Inject] private AsteroidConfig       asteroidConfig;
-    [Inject] private ICellsService        cellsSystem;
+    [Inject] private AsteroidConfig          asteroidConfig;
+    [Inject] private ICellsService           cellsSystem;
+    [Inject] private Grid                    grid;
+    [Inject] private IPickableObjectsFactory oreFactory;
     #endregion
 
     #region Inspector's variables
@@ -22,29 +24,28 @@ public class GridSystem : MonoBehaviour
     #endregion
 
     #region Private variables
-    private Grid    grid;
+    // private Grid    grid;
     #endregion
 
     private void Start()
     {
-        GenerateCave();
-        ConnectCellsMap();
-        grid = GetComponent<Grid>();
+        // grid = GetComponent<Grid>();
     }
 
     private void OnDestroy()
     {
-        DisconnectCellsMap();
+        // DisconnectCellsMap();
     }
 
     #region Connections
-    private void ConnectCellsMap()
+    public void ConnectCellsMap()
     {
+        Debug.Log(cellsSystem);
         cellsSystem.CellDamaged     += CellDamaged;
         cellsSystem.CellDestroyed   += CellDestroyed;
         cellsSystem.ResourceDropped += ResourceDropped;
     }
-        private void DisconnectCellsMap()
+    public void DisconnectCellsMap()
     {
         cellsSystem.CellDamaged     -= CellDamaged;
         cellsSystem.CellDestroyed   -= CellDestroyed;
@@ -125,10 +126,10 @@ public class GridSystem : MonoBehaviour
         if (!noise_checker.NoiseCellCheck(position.x, position.y)) return;
         Cell cell = new Cell(layer.cell_data.GetCell());
 
-        if (layer.resource_params != null)
-        {
-            cell.cell_resource = layer.resource_params;
-        }
+        // if (layer.resource_params != null)
+        // {
+        //     cell.cell_resource = layer.resource_params;
+        // }
 
         cells[position] = cell;
     }
@@ -162,6 +163,7 @@ public class GridSystem : MonoBehaviour
     private void ResourceDropped(Vector2Int on_position, Item resource)
     {
         Vector3 final_position = grid.CellToLocal(new Vector3Int(on_position.x, on_position.y)) + grid.cellSize / 2;
-        ItemObject.SpawnResource(resource, on_position, final_position, resources.transform);
+        ItemObject ore = oreFactory.Create(on_position, resource);
+        
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RectangleCellsService : BaseCellsService, ICellsService
 {
-    public RectangleCellsService(PlayerController player) : base(player) {}
+    public RectangleCellsService(Grid grid) : base(grid) { }
 
     public override Dictionary<Vector2Int, Cell> CellsMap
         { get { if (cellsMap == null)        cellsMap        = new Dictionary<Vector2Int, Cell>(); return cellsMap; } }
@@ -90,4 +90,16 @@ public class RectangleCellsService : BaseCellsService, ICellsService
         ResourcePicked?.Invoke(from_cell);
     }
 
+    public override Vector3 GetCellWorldPosition(Vector2Int from_cell)
+    {
+        Vector3 rawPosition = grid.CellToWorld(new Vector3Int(from_cell.x, 0, from_cell.y));
+        rawPosition.z = grid.transform.position.z;
+        return rawPosition;
+    }
+
+    public override Vector2Int GetCellMapPosition(Vector3 cell)
+    {
+        Vector3Int position = grid.LocalToCell(cell);
+        return new Vector2Int(position.x, position.z);
+    }
 }

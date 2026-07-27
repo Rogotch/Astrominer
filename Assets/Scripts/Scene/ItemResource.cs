@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class ItemObject : MonoBehaviour
+public class ItemObject : MonoBehaviour, IPickable
 {
     #region Inspector's Variables
     public Item itemData;
@@ -13,27 +13,36 @@ public class ItemObject : MonoBehaviour
     #region Private Variables
     #endregion
 
-    public static GameObject SpawnResource(Item resource, Vector2Int grid_position, Vector3 on_position, Transform parent)
-    {
-        GameObject instance = Instantiate(resource.resourceData.scene_prefab, parent);
-        instance.transform.position = on_position;
-        ItemObject item = instance.GetComponent<ItemObject>();
-        if (item != null)
-        {
-            item.SetData(resource);
-            item.gridPosition = grid_position;
-        }
-        return instance;
-    }
+    // public static GameObject SpawnResource(Item resource, Vector2Int grid_position, Vector3 on_position, Transform parent)
+    // {
+    //     GameObject instance = Instantiate(resource.resourceData.scene_prefab, parent);
+    //     instance.transform.position = on_position;
+    //     ItemObject item = instance.GetComponent<ItemObject>();
+    //     if (item != null)
+    //     {
+    //         item.SetData(resource);
+    //         item.gridPosition = grid_position;
+    //     }
+    //     return instance;
+    // }
 
     public void Awake()
     {
-        CellsSystem.ResourcePicked += ItemPicked;
+        // CellsSystem.ResourcePicked += ItemPicked;
     }
 
     public void OnDestroy()
     {
-        CellsSystem.ResourcePicked -= ItemPicked;
+        // CellsSystem.ResourcePicked -= ItemPicked;
+    }
+
+    public void PickUp(Vector2Int from_position)
+    {
+        Destroy(this.gameObject);
+    }
+    public bool CanBePicked(Vector2Int from_position)
+    {
+        return gridPosition == from_position;
     }
 
     public void SetData(Item new_data)

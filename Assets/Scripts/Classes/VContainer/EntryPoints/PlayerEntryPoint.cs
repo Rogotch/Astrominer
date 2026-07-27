@@ -4,16 +4,24 @@ using VContainer.Unity;
 
 public class PlayerEntryPoint : IStartable
 {
-    private readonly IPlayerInputService input;
-    private readonly PlayerController    player;
+    private readonly IPlayerInputService  input;
+    private readonly PlayerController     player;
+    private readonly AsteroidConfig       config;
+    private readonly BaseCameraController sceneCamera;
 
-    public PlayerEntryPoint(IPlayerInputService input, PlayerController player)
+    public PlayerEntryPoint(IPlayerInputService input, PlayerController player, AsteroidConfig config, BaseCameraController sceneCamera)
     {
-        this.input  = input;
-        this.player = player;
+        this.input       = input;
+        this.player      = player;
+        this.config      = config;
+        this.sceneCamera = sceneCamera;
     }
     public void Start()
     {
         Debug.Log("Game started with DI");
+        player.SetCharacterOnCell(config.startPosition);
+        sceneCamera.SetFollowedCharacter(player);
+        sceneCamera.SetOnCharacterPosition();
+        // sceneCamera
     }
 }

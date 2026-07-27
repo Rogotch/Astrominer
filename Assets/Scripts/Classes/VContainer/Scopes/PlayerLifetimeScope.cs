@@ -10,10 +10,6 @@ public class PlayerLifetimeScope : LifetimeScope
     {
         Debug.Log("Player Scope");
 
-        builder.Register<IPlayerInputService, PCPlayerInputService> (Lifetime.Singleton);
-        builder.Register<IEquipmentService,   EquipmentService>     (Lifetime.Singleton);
-
-        builder.Register<IDigToolFactory, DigToolFactory>(Lifetime.Singleton);
         builder.RegisterComponent(player);
         builder.RegisterEntryPoint<PlayerEntryPoint>();
     }

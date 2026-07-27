@@ -9,7 +9,7 @@ using UnityEngine;
 public class CellsDataLayer : GenerationDataLayer
 {
     public CellData cell_data;
-    public BlocksResource resource_params;
+    // public BlocksResource resource_params;
     public bool additional = false;
 }
 [System.Serializable]

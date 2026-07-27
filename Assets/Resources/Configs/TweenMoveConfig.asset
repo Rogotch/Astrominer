@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 26ab3be4360b9d46da4d69bcec334416, type: 3}
   m_Name: TweenMoveConfig
   m_EditorClassIdentifier: Assembly-CSharp::TweenMoveConfig
   timeForStep: 0.2
