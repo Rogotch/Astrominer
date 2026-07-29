@@ -13,8 +13,6 @@ public class GameplayLifetimeScope : LifetimeScope
     [SerializeField] private LevelStructure        structure; 
     protected override void Configure(IContainerBuilder builder)
     {
-        Debug.Log("Gameplay Scope");
-
         builder.RegisterInstance(asteroidConfig);
         builder.RegisterComponent(structure);
         builder.RegisterComponent(itemPrefab);
@@ -24,18 +22,19 @@ public class GameplayLifetimeScope : LifetimeScope
         builder.RegisterComponent(gridSystem);
         Debug.Log($"structure characters {structure.characters != null}");
         builder.RegisterComponentInNewPrefab<BaseCameraController>(sceneCamera, Lifetime.Scoped);
-        builder.RegisterComponentInNewPrefab<PlayerController>(playerPrefab, Lifetime.Scoped)
+
+
+        builder.Register<IAnimationServiceFactory, AnimationServiceFactory >(Lifetime.Singleton);
+        builder.Register<IMovementServiceFactory,  MovementServiceFactory  >(Lifetime.Singleton);
+        builder.Register<IPlayerInputService,      PCPlayerInputService    >(Lifetime.Singleton);
+        builder.Register<IEquipmentService,        EquipmentService        >(Lifetime.Singleton);
+        builder.Register<IDigToolFactory,          DigToolFactory          >(Lifetime.Singleton);
+        builder.RegisterComponentInNewPrefab<PlayerController>(playerPrefab, Lifetime.Singleton)
                 .UnderTransform(structure.characters);
 
 
-        builder.Register<IPlayerInputService, PCPlayerInputService> (Lifetime.Scoped);
-        builder.Register<IEquipmentService,   EquipmentService>     (Lifetime.Scoped);
-
-        builder.Register<IDigToolFactory, DigToolFactory>(Lifetime.Scoped);
-        builder.Register<IPickableObjectsFactory,  PickableOreFactory>(Lifetime.Scoped);
-        builder.Register<IAnimationServiceFactory, AnimationServiceFactory>(Lifetime.Scoped);
-        builder.Register<IMovementServiceFactory,  MovementServiceFactory> (Lifetime.Scoped);
-        builder.Register<PlayerLifetimeScope>(Lifetime.Scoped);
+        builder.Register<IPickableObjectsFactory,  PickableOreFactory>(Lifetime.Singleton);
+        builder.Register<PlayerLifetimeScope>(Lifetime.Singleton);
         
         builder.RegisterEntryPoint<LevelEntryPoint>();
     }

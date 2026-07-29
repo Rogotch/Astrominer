@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-public class PlayerEntryPoint : IStartable
+public class PlayerEntryPoint : IStartable, IDisposable
 {
     private readonly IPlayerInputService  input;
     private readonly PlayerController     player;
@@ -23,5 +24,11 @@ public class PlayerEntryPoint : IStartable
         sceneCamera.SetFollowedCharacter(player);
         sceneCamera.SetOnCharacterPosition();
         // sceneCamera
+        player.StartConfiguration();
     }
+    public void Dispose()
+    {        
+        player.DisposeConfiguration();
+    }
+
 }

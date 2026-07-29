@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 using VContainer;
 using VContainer.Unity;
 
-public class PlayerController : BaseCharacterController, IStartable, IDisposable
+public class PlayerController : BaseCharacterController
 {
     #region Injections
     [Inject] private IPlayerInputService input;
@@ -19,21 +19,20 @@ public class PlayerController : BaseCharacterController, IStartable, IDisposable
     #endregion
     public Vector2Int delayed_command;
 
-
-    public override void Start()
+    public override void StartConfiguration()
     {
-        base.Start();
+        base.StartConfiguration();
         EquipDigTool(IDigInstrument.ToolType.DRILL);
+        ChangeState(CharacterState.STATES.IDLE);
         input.OnMove            += MoveInput;
         moveService.MovingEnded += CheckSteppedCell;
-        ChangeState(CharacterState.STATES.IDLE);
     }
-    public override void Dispose()
+    public override void DisposeConfiguration()
     {
-        base.Dispose();
-        input.OnMove -= MoveInput;
+        input.OnMove            -= MoveInput;
         moveService.MovingEnded -= CheckSteppedCell;
     }
+
     public void EquipDigTool(IDigInstrument.ToolType toolType)
     {
         Equipment.EquipTool(DigToolFactory.Create(toolType, animationService));
@@ -67,6 +66,7 @@ public class PlayerController : BaseCharacterController, IStartable, IDisposable
     }
     public override void CheckSteppedCell(Vector2Int cell_from, Vector2Int cell_to)
     {
+        Debug.Log($"Stepped on cell {cell_to}, has resource {CellsSystem.ResourcesCells.ContainsKey(cell_to)}");
         if (CellsSystem.ResourcesCells.ContainsKey(cell_to))
         {
             PickupResource(CellsSystem.ResourcesCells[cell_to]);

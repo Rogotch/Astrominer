@@ -29,9 +29,9 @@ public interface ICellsService
 
 public abstract class BaseCellsService : ICellsService
 {
-    protected Dictionary<Vector2Int, Cell> cellsMap;       
-    protected Dictionary<Vector2Int, Cell> backgroundCells;
-    protected Dictionary<Vector2Int, Item> resourcesCells; 
+    protected Dictionary<Vector2Int, Cell> cellsMap        = new Dictionary<Vector2Int, Cell>();       
+    protected Dictionary<Vector2Int, Cell> backgroundCells = new Dictionary<Vector2Int, Cell>();
+    protected Dictionary<Vector2Int, Item> resourcesCells  = new Dictionary<Vector2Int, Item>(); 
 
     public abstract  Dictionary<Vector2Int, Cell> CellsMap          { get;}
     public abstract  Dictionary<Vector2Int, Cell> BackgroundCells   { get;}

@@ -40,7 +40,6 @@ public class GridSystem : MonoBehaviour
     #region Connections
     public void ConnectCellsMap()
     {
-        Debug.Log(cellsSystem);
         cellsSystem.CellDamaged     += CellDamaged;
         cellsSystem.CellDestroyed   += CellDestroyed;
         cellsSystem.ResourceDropped += ResourceDropped;
@@ -64,7 +63,6 @@ public class GridSystem : MonoBehaviour
     [ContextMenu("Generate Cave")]
     public void GenerateCave()
     {
-        Debug.Log("Generate");
         cellsSystem.BackgroundCells.Clear();
         cellsSystem.CellsMap.Clear();
 
@@ -162,8 +160,6 @@ public class GridSystem : MonoBehaviour
     }
     private void ResourceDropped(Vector2Int on_position, Item resource)
     {
-        Vector3 final_position = grid.CellToLocal(new Vector3Int(on_position.x, on_position.y)) + grid.cellSize / 2;
         ItemObject ore = oreFactory.Create(on_position, resource);
-        
     }
 }

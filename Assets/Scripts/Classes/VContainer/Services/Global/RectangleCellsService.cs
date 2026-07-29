@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RectangleCellsService : BaseCellsService, ICellsService
@@ -39,7 +40,7 @@ public class RectangleCellsService : BaseCellsService, ICellsService
 
     public override bool IsCellEmpty(Vector2Int cell)
     {
-        return !CellsMap.ContainsKey(cell);
+        return !cellsMap.ContainsKey(cell);
     }
 
     public override void DamageCell(Vector2Int cell, float damage)
@@ -63,8 +64,8 @@ public class RectangleCellsService : BaseCellsService, ICellsService
 
     public override void DestroyCell(Vector2Int cell)
     {
-        if (IsCellEmpty(cell))
-            return;
+        // if (IsCellEmpty(cell))
+        //     return;
         
         if (cellsMap[cell].cell_resource != null)
         {
@@ -72,6 +73,7 @@ public class RectangleCellsService : BaseCellsService, ICellsService
             Item new_resource = new Item(resource);
             DropResource(cell, new_resource);
         }
+        string result = string.Join(", ", resourcesCells.Select(kvp => $"{kvp.Key}:{kvp.Value}"));
         cellsMap.Remove(cell);
         CellDestroyed?.Invoke(cell);
     }
@@ -79,22 +81,24 @@ public class RectangleCellsService : BaseCellsService, ICellsService
 
     public override void DropResource(Vector2Int on_cell, Item resource)
     {
-        ResourcesCells[on_cell] = resource;
+        resourcesCells.Add(on_cell, resource);
         ResourceDropped?.Invoke(on_cell, resource);
+        Debug.Log("Resource dropped");
     }
 
     public override void PickupResource(Vector2Int from_cell)
     {
         Debug.Log($"resource picked from cell {from_cell}");
-        ResourcesCells.Remove(from_cell);
+        resourcesCells.Remove(from_cell);
         ResourcePicked?.Invoke(from_cell);
     }
 
     public override Vector3 GetCellWorldPosition(Vector2Int from_cell)
     {
-        Vector3 rawPosition = grid.CellToWorld(new Vector3Int(from_cell.x, 0, from_cell.y));
-        rawPosition.z = grid.transform.position.z;
-        return rawPosition;
+        Vector3 final_position = grid.CellToLocal(new Vector3Int(from_cell.x, from_cell.y)) + grid.cellSize / 2;
+        // Vector3 rawPosition = grid.CellToWorld(new Vector3Int(from_cell.x, 0, from_cell.y));
+        // final_position.z = grid.transform.position.z;
+        return final_position;
     }
 
     public override Vector2Int GetCellMapPosition(Vector3 cell)

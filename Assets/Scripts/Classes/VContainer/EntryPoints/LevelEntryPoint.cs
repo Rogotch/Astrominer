@@ -6,7 +6,6 @@ using VContainer.Unity;
 public class LevelEntryPoint : IStartable, IDisposable
 {
     private readonly GridSystem gridSystem;
-    private readonly BaseCameraController  sceneCamera;
     private readonly PlayerController player;
     // private readonly GridSystem cellsSystem;
     public LevelEntryPoint(GridSystem gridSystem, PlayerController player)
@@ -16,7 +15,6 @@ public class LevelEntryPoint : IStartable, IDisposable
     }
     public void Start()
     {
-        Debug.Log("Close menu");
         ScenesChanger.CloseScene(ScenesChanger.ExistingScenes.MAIN_MENU);
         gridSystem.GenerateCave();
         gridSystem.ConnectCellsMap();

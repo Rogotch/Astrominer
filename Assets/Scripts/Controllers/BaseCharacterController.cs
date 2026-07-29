@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 using VContainer;
 using VContainer.Unity;
 
-public class BaseCharacterController : MonoBehaviour, IStartable, IDisposable
+public class BaseCharacterController : MonoBehaviour
 {
     //#region Private variables
     ////private Rigidbody   rigid_body;
@@ -47,21 +47,19 @@ public class BaseCharacterController : MonoBehaviour, IStartable, IDisposable
     #endregion
     public Func<IMovementService> getMovementService;
     
-    public virtual void Start()
+    public virtual void DisonnectDiggingTool()
+    {
+
+    }
+
+    public virtual void StartConfiguration()
     {
         animationService   = AnimFactory.Create(WorldGrid, transform);
         moveService        = MoveFactory.Create(WorldGrid, transform);
         getMovementService =  () => moveService;
     }
-    public virtual void Dispose() { }
-    
-    // public virtual void ConnectDiggingTool()
-    // {
-    //     diggingTool = GetComponent<DiggingInstrument>();
-    // }
-    public virtual void DisonnectDiggingTool()
+    public virtual void DisposeConfiguration()
     {
-
     }
 
     public void ChangeStateTo(CharacterState newState)

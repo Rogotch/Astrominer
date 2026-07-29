@@ -9,7 +9,6 @@ public class PlayerLifetimeScope : LifetimeScope
     protected override void Configure(IContainerBuilder builder)
     {
         Debug.Log("Player Scope");
-
         builder.RegisterComponent(player);
         builder.RegisterEntryPoint<PlayerEntryPoint>();
     }
