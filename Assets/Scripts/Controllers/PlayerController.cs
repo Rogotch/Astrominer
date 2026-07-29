@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -66,8 +67,11 @@ public class PlayerController : BaseCharacterController
     }
     public override void CheckSteppedCell(Vector2Int cell_from, Vector2Int cell_to)
     {
-        Debug.Log($"Stepped on cell {cell_to}, has resource {CellsSystem.ResourcesCells.ContainsKey(cell_to)}");
-        if (CellsSystem.ResourcesCells.ContainsKey(cell_to))
+        string result = string.Join(", ", CellsSystem.ResourcesCells.Select(kvp => $"{kvp.Key}:{kvp.Value}"));
+        Debug.Log($"all resources {result}");
+
+        Debug.Log($"Stepped on cell {cell_to}, has resource {CellsSystem.IsHasResource(cell_to)}");
+        if (CellsSystem.IsHasResource(cell_to))
         {
             PickupResource(CellsSystem.ResourcesCells[cell_to]);
         }

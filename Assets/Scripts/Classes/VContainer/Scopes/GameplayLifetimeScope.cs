@@ -18,10 +18,10 @@ public class GameplayLifetimeScope : LifetimeScope
         builder.RegisterComponent(itemPrefab);
         builder.RegisterComponent(grid);
 
-        builder.Register<ICellsService, RectangleCellsService>  (Lifetime.Scoped);
+        builder.Register<ICellsService, RectangleCellsService>  (Lifetime.Singleton);
         builder.RegisterComponent(gridSystem);
         Debug.Log($"structure characters {structure.characters != null}");
-        builder.RegisterComponentInNewPrefab<BaseCameraController>(sceneCamera, Lifetime.Scoped);
+        builder.RegisterComponentInNewPrefab<BaseCameraController>(sceneCamera, Lifetime.Singleton);
 
 
         builder.Register<IAnimationServiceFactory, AnimationServiceFactory >(Lifetime.Singleton);

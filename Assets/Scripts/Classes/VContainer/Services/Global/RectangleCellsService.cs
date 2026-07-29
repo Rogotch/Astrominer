@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class RectangleCellsService : BaseCellsService, ICellsService
 {
-    public RectangleCellsService(Grid grid) : base(grid) { }
+    public RectangleCellsService(Grid grid) : base(grid) {
+    Debug.Log($"RectangleCellsService создан! Hash: {GetHashCode()}");}
 
     public override Dictionary<Vector2Int, Cell> CellsMap
         { get { if (cellsMap == null)        cellsMap        = new Dictionary<Vector2Int, Cell>(); return cellsMap; } }
@@ -64,16 +65,14 @@ public class RectangleCellsService : BaseCellsService, ICellsService
 
     public override void DestroyCell(Vector2Int cell)
     {
-        // if (IsCellEmpty(cell))
-        //     return;
+        if (IsCellEmpty(cell))
+            return;
         
         if (cellsMap[cell].cell_resource != null)
         {
             BlocksResource resource = cellsMap[cell].cell_resource;
-            Item new_resource = new Item(resource);
-            DropResource(cell, new_resource);
+            DropResource(cell, new Item(resource));
         }
-        string result = string.Join(", ", resourcesCells.Select(kvp => $"{kvp.Key}:{kvp.Value}"));
         cellsMap.Remove(cell);
         CellDestroyed?.Invoke(cell);
     }
@@ -83,7 +82,11 @@ public class RectangleCellsService : BaseCellsService, ICellsService
     {
         resourcesCells.Add(on_cell, resource);
         ResourceDropped?.Invoke(on_cell, resource);
-        Debug.Log("Resource dropped");
+
+        string result = string.Join(", ", resourcesCells.Select(kvp => $"{kvp.Key}:{kvp.Value}"));
+        Debug.Log($"Resource dropped {result} {IsHasResource(on_cell)}");
+        LogAllResources();
+
     }
 
     public override void PickupResource(Vector2Int from_cell)
@@ -105,5 +108,16 @@ public class RectangleCellsService : BaseCellsService, ICellsService
     {
         Vector3Int position = grid.LocalToCell(cell);
         return new Vector2Int(position.x, position.z);
+    }
+
+    public override bool IsHasResource(Vector2Int cell)
+    {
+        return resourcesCells.ContainsKey(cell);
+    }
+
+    public override void LogAllResources()
+    {
+        string result = string.Join(", ", resourcesCells.Select(kvp => $"{kvp.Key}:{kvp.Value.resourceData.tag}"));
+        Debug.Log($"all resources {(result.Length == 0 ? "none" : result)}");
     }
 }

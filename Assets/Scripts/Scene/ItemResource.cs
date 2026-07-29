@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using VContainer;
 
 [Serializable]
 public class ItemObject : MonoBehaviour, IPickable
@@ -11,29 +12,18 @@ public class ItemObject : MonoBehaviour, IPickable
     #endregion
 
     #region Private Variables
+    [Inject] private ICellsService cellsSystem;
     #endregion
 
-    // public static GameObject SpawnResource(Item resource, Vector2Int grid_position, Vector3 on_position, Transform parent)
-    // {
-    //     GameObject instance = Instantiate(resource.resourceData.scene_prefab, parent);
-    //     instance.transform.position = on_position;
-    //     ItemObject item = instance.GetComponent<ItemObject>();
-    //     if (item != null)
-    //     {
-    //         item.SetData(resource);
-    //         item.gridPosition = grid_position;
-    //     }
-    //     return instance;
-    // }
 
-    public void Awake()
+    public void Start()
     {
-        // CellsSystem.ResourcePicked += ItemPicked;
+        cellsSystem.ResourcePicked += ItemPicked;
     }
 
     public void OnDestroy()
     {
-        // CellsSystem.ResourcePicked -= ItemPicked;
+        cellsSystem.ResourcePicked -= ItemPicked;
     }
 
     public void PickUp(Vector2Int from_position)
@@ -71,10 +61,10 @@ public class Item
     #endregion
 
     public Item() { }
-    public Item(BlocksResource resource_data, int _count = 1)
+    public Item(BlocksResource resourceData, int count = 1)
     {
-        this.resourceData = resource_data;
-        this.sprite       = resource_data.icon;
-        this.count        = _count;
+        this.resourceData = resourceData;
+        this.sprite       = resourceData.icon;
+        this.count        = count;
     }
 }

@@ -18,11 +18,13 @@ public interface ICellsService
     public abstract Vector2Int GetCellNeighboursVector (Vector2Int position);
     public abstract Cell       GetCell                 (Vector2Int position);
     public abstract bool       IsCellEmpty             (Vector2Int cell);
+    public abstract bool       IsHasResource           (Vector2Int cell);
     public abstract void       DamageCell              (Vector2Int cell, float damage);
     public abstract void       CheckCell               (Vector2Int cell);
     public abstract void       DestroyCell             (Vector2Int cell);
     public abstract void       DropResource            (Vector2Int on_cell, Item resource);
     public abstract void       PickupResource          (Vector2Int from_cell);
+    public abstract void       LogAllResources         ();
     public abstract Vector3    GetCellWorldPosition    (Vector2Int from_cell);
     public abstract Vector2Int GetCellMapPosition      (Vector3    cell);
 }
@@ -51,6 +53,7 @@ public abstract class BaseCellsService : ICellsService
     public abstract Vector2Int GetCellNeighboursVector (Vector2Int position);
     public abstract Cell       GetCell                 (Vector2Int position);
     public abstract bool       IsCellEmpty             (Vector2Int cell);
+    public abstract bool       IsHasResource           (Vector2Int cell);
     public abstract void       DamageCell              (Vector2Int cell, float damage);
     public abstract void       CheckCell               (Vector2Int cell);
     public abstract void       DestroyCell             (Vector2Int cell);
@@ -58,4 +61,5 @@ public abstract class BaseCellsService : ICellsService
     public abstract void       PickupResource          (Vector2Int from_cell);
     public abstract Vector3    GetCellWorldPosition    (Vector2Int from_cell);
     public abstract Vector2Int GetCellMapPosition      (Vector3    cell);
+    public abstract void       LogAllResources         ();
 }
