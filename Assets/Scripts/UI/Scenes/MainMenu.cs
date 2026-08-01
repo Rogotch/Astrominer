@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using VContainer;
 
 public class MainMenu : MonoBehaviour
 {
+    [Inject] private ScenesChanger scenesChanger;
     public void StartNewGame()
     {
-        ScenesChanger.RunScene(ScenesChanger.ExistingScenes.DIGGING_UI, LoadSceneMode.Additive);
-        ScenesChanger.RunScene(ScenesChanger.ExistingScenes.LEVEL,      LoadSceneMode.Additive);
+        scenesChanger.RunScene(ScenesChanger.ExistingScenes.GAME_RUN, LoadSceneMode.Additive);
     }
 
     public void QuickStart()

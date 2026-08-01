@@ -5,17 +5,15 @@ using VContainer.Unity;
 
 public class LevelEntryPoint : IStartable, IDisposable
 {
-    private readonly GridSystem gridSystem;
-    private readonly PlayerController player;
-    // private readonly GridSystem cellsSystem;
-    public LevelEntryPoint(GridSystem gridSystem, PlayerController player)
+    private readonly GridSystem    gridSystem;
+    private readonly ScenesChanger scenesChanger;
+    public LevelEntryPoint(GridSystem gridSystem, ScenesChanger scenesChanger)
     {
-        this.gridSystem  = gridSystem;
-        this.player = player;
+        this.gridSystem     = gridSystem;
+        this.scenesChanger  = scenesChanger;
     }
     public void Start()
     {
-        ScenesChanger.CloseScene(ScenesChanger.ExistingScenes.MAIN_MENU);
         gridSystem.GenerateCave();
         gridSystem.ConnectCellsMap();
     }

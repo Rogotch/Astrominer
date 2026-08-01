@@ -9,9 +9,10 @@ public class GameLifetimeScope : LifetimeScope
     private MainConfig mainConfig;
     protected override void Configure(IContainerBuilder builder)
     {
-        builder.RegisterEntryPoint<GamePresenter>();
+        builder.Register<ScenesChanger>(Lifetime.Scoped);
         builder.RegisterInstance(mainConfig);
 
         builder.Register<GameplayLifetimeScope>(Lifetime.Scoped);
+        builder.RegisterEntryPoint<GamePresenter>();
     }
 }

@@ -50,15 +50,13 @@ public class ItemObject : MonoBehaviour, IPickable
 
 public class Item
 {
-    #region Inspector's Variables
+    public string         Tag => resourceData.tag;
     public Sprite         sprite;
     public BlocksResource resourceData;
     public int            count;
-    #endregion
 
-    #region Inspector's Variables
-
-    #endregion
+    // #region Inspector's Variables
+    // #endregion
 
     public Item() { }
     public Item(BlocksResource resourceData, int count = 1)

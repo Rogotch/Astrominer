@@ -12,11 +12,12 @@ using VContainer.Unity;
 public class PlayerController : BaseCharacterController
 {
     #region Injections
-    [Inject] private IPlayerInputService input;
+    [Inject] private IPlayerInputService   input;
+    [Inject] private Func<IResourcePicker> pickerFactory;
     #endregion
 
     #region Private variables
-    private Dictionary<string, Item> picked_resources = new Dictionary<string, Item>();
+    private IResourcePicker resourcePicker;
     #endregion
     public Vector2Int delayed_command;
 
@@ -25,6 +26,7 @@ public class PlayerController : BaseCharacterController
         base.StartConfiguration();
         EquipDigTool(IDigInstrument.ToolType.DRILL);
         ChangeState(CharacterState.STATES.IDLE);
+        resourcePicker           = pickerFactory.Invoke();
         input.OnMove            += MoveInput;
         moveService.MovingEnded += CheckSteppedCell;
     }
@@ -67,27 +69,15 @@ public class PlayerController : BaseCharacterController
     }
     public override void CheckSteppedCell(Vector2Int cell_from, Vector2Int cell_to)
     {
-        string result = string.Join(", ", CellsSystem.ResourcesCells.Select(kvp => $"{kvp.Key}:{kvp.Value}"));
-        Debug.Log($"all resources {result}");
-
-        Debug.Log($"Stepped on cell {cell_to}, has resource {CellsSystem.IsHasResource(cell_to)}");
         if (CellsSystem.IsHasResource(cell_to))
         {
-            PickupResource(CellsSystem.ResourcesCells[cell_to]);
+            PickupResource(CellsSystem.ResourcesCells[cell_to], cell_to);
         }
     }
 
-    public void PickupResource(Item item)
+    public void PickupResource(Item item, Vector2Int fromCell)
     {
-        if (picked_resources.ContainsKey(item.resourceData.tag))
-        {
-            picked_resources[item.resourceData.tag].count += item.count;
-        }
-        else
-        {
-            picked_resources[tag] = item;
-        }
-        CellsSystem.PickupResource(gridPosition);
+        resourcePicker.ResourcePickup(item);
+        CellsSystem.PickupResource(fromCell);
     }
-
 }

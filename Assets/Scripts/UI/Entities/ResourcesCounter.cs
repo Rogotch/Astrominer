@@ -36,13 +36,18 @@ public class ResourcesCounter : MonoBehaviour
         SetIcon(resource.icon);
     }
 
-    private void SetIcon(Sprite new_icon)
+    public void SetIcon(Sprite new_icon)
     {
         icon = new_icon;
         UpdateIcon();
     }
 
-    private void SetText(string new_text)
+    public void SetCounter(int counter)
+    {
+        SetText(counter.ToString());
+    }
+
+    public void SetText(string new_text)
     {
         text = new_text;
         UpdateText();

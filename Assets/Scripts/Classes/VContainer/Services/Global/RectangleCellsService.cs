@@ -91,7 +91,6 @@ public class RectangleCellsService : BaseCellsService, ICellsService
 
     public override void PickupResource(Vector2Int from_cell)
     {
-        Debug.Log($"resource picked from cell {from_cell}");
         resourcesCells.Remove(from_cell);
         ResourcePicked?.Invoke(from_cell);
     }

@@ -8,8 +8,8 @@ public class GameplayUILifetimeScope : LifetimeScope
     [SerializeField] private ResourcesCounter counterPrefab;
     protected override void Configure(IContainerBuilder builder)
     {
-
-        builder.Register<ISceneUIService, GameplayUIService>(Lifetime.Singleton);
+        builder.RegisterComponent(counterPrefab);
+        builder.Register<IResourceCounterFactory, ResourceCounterFactory>(Lifetime.Singleton);
 
         builder.RegisterEntryPoint<GameplayUIEntryPoint>(Lifetime.Singleton);
     }

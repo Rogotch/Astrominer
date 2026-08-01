@@ -4,9 +4,10 @@ using VContainer.Unity;
 
 public class GamePresenter : IStartable
 {
+    [Inject] private ScenesChanger scenesChanger;
     public void Start()
     {
-        ScenesChanger.RunScene(ScenesChanger.ExistingScenes.MAIN_MENU, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+        scenesChanger.RunScene(ScenesChanger.ExistingScenes.MAIN_MENU, UnityEngine.SceneManagement.LoadSceneMode.Additive);
 
     }
 }

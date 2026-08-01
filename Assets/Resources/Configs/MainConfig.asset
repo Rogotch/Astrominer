@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainConfig
   tweenAnimation: {fileID: 11400000, guid: 6f33f4ae18dad751da7fb4d1b99d4fb5, type: 2}
   tweenMovement: {fileID: 11400000, guid: 604a9271d45a00f329f22c49f74a38b5, type: 2}
+  gameplayInterface: {fileID: 11400000, guid: 039c083324a77cba993ff035d15c89f2, type: 2}
