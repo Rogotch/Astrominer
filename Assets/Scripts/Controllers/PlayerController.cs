@@ -20,6 +20,7 @@ public class PlayerController : BaseCharacterController
     private IResourcePicker resourcePicker;
     #endregion
     public Vector2Int delayed_command;
+    public Vector2Int currentMoveVector;
 
     public override void StartConfiguration()
     {
@@ -27,12 +28,16 @@ public class PlayerController : BaseCharacterController
         EquipDigTool(IDigInstrument.ToolType.DRILL);
         ChangeState(CharacterState.STATES.IDLE);
         resourcePicker           = pickerFactory.Invoke();
-        input.OnMove            += MoveInput;
+        input.OnMovePressed     += MoveInputPressed;
+        input.OnMoveReleased    += MoveInputReleased;
+        // input.OnMove            += MoveInput;
         moveService.MovingEnded += CheckSteppedCell;
     }
     public override void DisposeConfiguration()
     {
-        input.OnMove            -= MoveInput;
+        // input.OnMove            -= MoveInput;
+        input.OnMovePressed     -= MoveInputPressed;
+        input.OnMoveReleased    -= MoveInputReleased;
         moveService.MovingEnded -= CheckSteppedCell;
     }
 
@@ -45,7 +50,18 @@ public class PlayerController : BaseCharacterController
     // {
     //     player_input = new_player_input;
     // }
-
+    
+    public void MoveInputPressed(Vector2Int moveVector)
+    {
+        if (moveVector.magnitude > 1) moveVector.y = 0;
+        currentMoveVector = moveVector;
+        if (currentState is not PlayerIdle) delayed_command = moveVector;
+        (currentState as PlayerIdle)?.ReciveInputDirection(moveVector);
+    }
+    public void MoveInputReleased()
+    {
+        currentMoveVector = Vector2Int.zero;
+    }
     public void MoveInput(Vector2Int move_vector)
     {
         if (move_vector.magnitude > 1) move_vector.y = 0;

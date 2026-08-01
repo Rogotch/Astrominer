@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class RectangleCellsService : BaseCellsService, ICellsService
 {
-    public RectangleCellsService(Grid grid) : base(grid) {
-    Debug.Log($"RectangleCellsService создан! Hash: {GetHashCode()}");}
+    public RectangleCellsService(Grid grid) : base(grid) {}
 
     public override Dictionary<Vector2Int, Cell> CellsMap
         { get { if (cellsMap == null)        cellsMap        = new Dictionary<Vector2Int, Cell>(); return cellsMap; } }
@@ -82,11 +81,6 @@ public class RectangleCellsService : BaseCellsService, ICellsService
     {
         resourcesCells.Add(on_cell, resource);
         ResourceDropped?.Invoke(on_cell, resource);
-
-        string result = string.Join(", ", resourcesCells.Select(kvp => $"{kvp.Key}:{kvp.Value}"));
-        Debug.Log($"Resource dropped {result} {IsHasResource(on_cell)}");
-        LogAllResources();
-
     }
 
     public override void PickupResource(Vector2Int from_cell)
@@ -98,8 +92,6 @@ public class RectangleCellsService : BaseCellsService, ICellsService
     public override Vector3 GetCellWorldPosition(Vector2Int from_cell)
     {
         Vector3 final_position = grid.CellToLocal(new Vector3Int(from_cell.x, from_cell.y)) + grid.cellSize / 2;
-        // Vector3 rawPosition = grid.CellToWorld(new Vector3Int(from_cell.x, 0, from_cell.y));
-        // final_position.z = grid.transform.position.z;
         return final_position;
     }
 

@@ -27,6 +27,7 @@ public class PlayerIdle : CharacterIdle
     {
         PlayerController controller = (getController() as PlayerController);
         base.Enter();
-        if (controller.delayed_command.magnitude > 0) ReciveInputDirection(controller.delayed_command);
+        if      (controller.delayed_command.magnitude   > 0) ReciveInputDirection(controller.delayed_command);
+        else if (controller.currentMoveVector.magnitude > 0) ReciveInputDirection(controller.currentMoveVector);
     }
 }

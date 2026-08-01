@@ -17,7 +17,6 @@ public class GameplayLifetimeScope : LifetimeScope
         builder.RegisterComponent(itemPrefab);
         builder.RegisterComponent(grid);
 
-        builder.Register<IResourcesSystem,         BaseResourcesSystem     >(Lifetime.Singleton);
         builder.Register<ICellsService,            RectangleCellsService   >(Lifetime.Singleton);
         builder.RegisterComponent(gridSystem);
         builder.RegisterComponentInNewPrefab<BaseCameraController>(sceneCamera, Lifetime.Singleton);

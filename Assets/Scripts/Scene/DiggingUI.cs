@@ -10,13 +10,14 @@ public class DiggingUI : MonoBehaviour
     [Inject] private IResourcesSystem        resourcesSystem;
     [SerializeField] private Transform countersObject;
     private GameplayInterfaceConfig InterfaceConfig => mainConfig.gameplayInterface;
-    private Dictionary<String, ResourcesCounter> counters;
+    private Dictionary<String, ResourcesCounter> counters = new Dictionary<string, ResourcesCounter>();
 
     public void Start()
     {
+        InitCounters();
         resourcesSystem.ResourceChanged += UpdateResourceCounter;
     }
-    public void Oestroy()
+    public void OnDestroy()
     {
         resourcesSystem.ResourceChanged -= UpdateResourceCounter;
     }

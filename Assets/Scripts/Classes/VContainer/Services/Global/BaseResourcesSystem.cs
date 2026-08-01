@@ -13,9 +13,9 @@ public class BaseResourcesSystem : IResourcesSystem
 
     public void AddResourceToStorage(Item item)
     {
-        ItemGained.Invoke(item);
+        ItemGained?.Invoke(item);
         ChangeResourceValue(item.resourceData, item.count);
-        ResourceChanged.Invoke(GetResourceObject(item.resourceData));
+        ResourceChanged?.Invoke(GetResourceObject(item.resourceData));
     }
 
     public void AddResourcesBagToStorage(Dictionary<string, Item> bag)
