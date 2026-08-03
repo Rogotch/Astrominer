@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923d06e3c45e86824a9b5ce430903cc9, type: 3}
+  m_Name: BreakingProcessTiles
+  m_EditorClassIdentifier: Assembly-CSharp::BreakingProcessTiles
+  breakingTiles:
+  - {fileID: 946941405915718707, guid: b73cb16adbd07798ea86ec110cc1103f, type: 3}
+  - {fileID: 6437535217637764054, guid: b73cb16adbd07798ea86ec110cc1103f, type: 3}
+  - {fileID: 5589334296579292752, guid: b73cb16adbd07798ea86ec110cc1103f, type: 3}
+  - {fileID: -6715277493539700900, guid: b73cb16adbd07798ea86ec110cc1103f, type: 3}

@@ -7,4 +7,5 @@ public class MainConfig : ScriptableObject
     public TweenAnimationConfig      tweenAnimation;
     public TweenMoveConfig           tweenMovement;
     public GameplayInterfaceConfig   gameplayInterface;
+    public BreakingProcessTiles      breakingTiles;
 }

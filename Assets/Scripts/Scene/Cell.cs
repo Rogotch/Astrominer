@@ -5,9 +5,9 @@ using UnityEngine.WSA;
 [System.Serializable]
 public class Cell
 {
-    public float          max_health = 5;
+    public float          max_health = 5f;
     [System.NonSerialized]
-    public float          health = 5;
+    public float          health = 5f;
     public TileBase       tile;
     public BlocksResource cell_resource = null;
 
@@ -18,6 +18,11 @@ public class Cell
         health        = gived_cell.max_health;
         tile          = gived_cell.tile;
         cell_resource = gived_cell.cell_resource;
+    }
+
+    public float GetHealthLevel()
+    {
+        return health / max_health;
     }
 }
 //[System.Serializable]

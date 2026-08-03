@@ -1,9 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using VContainer;
 
 public class TilemapLayers : MonoBehaviour
 {
+
+    [Inject] private MainConfig configs; 
+    private BreakingProcessTiles breakingTiles => configs.breakingTiles; 
     #region
     [SerializeField] private Color modulation = Color.white;
     #endregion
@@ -73,6 +77,7 @@ public class TilemapLayers : MonoBehaviour
     public void SetDamageToCell(Vector2Int position, Cell cell)
     {
         if (cell == null) return;
+        break_cells.SetTile(new Vector3Int(position.x, position.y, 0), breakingTiles.GetTileByCell(cell));
     }
 
     private void SetModulation(Color color)
